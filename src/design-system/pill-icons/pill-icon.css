@@ -1,0 +1,41 @@
+/* Pill Icon - Dual-color icons for label pills */
+
+/* ============================================
+   BASE
+   ============================================ */
+
+.ds-pill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   LABEL TYPE PRESETS (CSS Custom Properties)
+   ============================================ */
+
+.ds-pill-icon--app {
+  --pill-icon-bg: var(--lightning-blue-400);
+  --pill-icon-fg: var(--lightning-contrast-white);
+}
+
+.ds-pill-icon--role {
+  --pill-icon-bg: var(--lightning-wisteria-500);
+  --pill-icon-fg: var(--lightning-contrast-white);
+}
+
+.ds-pill-icon--env {
+  --pill-icon-bg: var(--lightning-teal-600);
+  --pill-icon-fg: var(--lightning-contrast-white);
+}
+
+.ds-pill-icon--loc {
+  --pill-icon-bg: var(--lightning-purple-500);
+  --pill-icon-fg: var(--lightning-contrast-white);
+}
+
+.ds-pill-icon--default {
+  --pill-icon-bg: var(--lightning-bluegray-600);
+  --pill-icon-fg: var(--lightning-contrast-white);
+}

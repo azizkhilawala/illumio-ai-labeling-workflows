@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const Dazzle: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 18V15.7994H5L12 6V8.26934H19L12 18Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12.3052 5.04772C12.7192 5.18039 13 5.5653 13 6.00001V7.26935H19C19.3752 7.26935 19.7188 7.47937 19.8899 7.81326C20.0611 8.14716 20.0309 8.54875 19.8118 8.85332L12.8118 18.584C12.5583 18.9364 12.1064 19.085 11.6932 18.9518C11.2801 18.8186 11 18.4341 11 18V16.7994H5C4.62541 16.7994 4.28223 16.5901 4.11083 16.257C3.93943 15.9239 3.96855 15.523 4.18629 15.2182L11.1863 5.41875C11.439 5.06502 11.8912 4.91505 12.3052 5.04772Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('dazzle', Dazzle);

@@ -1,0 +1,91 @@
+/* Header Component - Using Lightning Design Tokens */
+
+.ds-header {
+  /* Local token overrides - using Lightning tokens */
+  --header-height: 80px;
+  --header-padding-x: var(--offset-xx-large);
+  --header-padding-y: var(--offset-medium);
+  --header-bg: var(--lightning-gray-25);
+  --header-text-secondary: var(--lightning-bluegray-600);
+  --header-text-primary: var(--lightning-bluegray-900);
+  --header-text-muted: var(--lightning-bluegray-400);
+  --header-bg-subtle: var(--lightning-bluegray-25);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+  padding: var(--header-padding-y) var(--header-padding-x);
+  background-color: var(--header-bg);
+  font-family: var(--family-font-family-default, 'Inter', sans-serif);
+}
+
+.ds-header--sticky {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Left section: Breadcrumb + Title */
+.ds-header__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2, 4px);
+}
+
+.ds-header__title-row {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2, 4px);
+}
+
+.ds-header__title {
+  margin: 0;
+  font-size: var(--font-size-display-s, 24px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--header-text-primary);
+  line-height: 1;
+}
+
+.ds-header__title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-header__title-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-header__title-suffix {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+/* Right section: Search, Avatar, Action */
+.ds-header__right {
+  display: flex;
+  align-items: center;
+  gap: var(--offset-medium, 12px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ds-header {
+    --header-padding-x: var(--offset-large);
+    flex-wrap: wrap;
+    gap: var(--offset-medium);
+  }
+
+  .ds-header__title {
+    font-size: var(--font-size-text-xl, 18px);
+  }
+}
+
+@media (max-width: 480px) {
+  .ds-header__right {
+    gap: var(--offset-small);
+  }
+}

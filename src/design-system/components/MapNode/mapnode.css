@@ -1,0 +1,526 @@
+/* MapNode Component - Graph visualization nodes for ReGraph */
+
+/* ============================================
+   BASE NODE CONTAINER
+   ============================================ */
+
+.ds-map-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--offset-xx-small);
+  position: relative;
+}
+
+.ds-map-node--large {
+  width: 144px;
+}
+
+.ds-map-node--medium {
+  width: 120px;
+}
+
+.ds-map-node--small {
+  width: 80px;
+  gap: 1px;
+}
+
+/* ============================================
+   NODE WRAPPER (contains icon + glyphs)
+   ============================================ */
+
+.ds-map-node__wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Size variants */
+.ds-map-node--large .ds-map-node__wrapper {
+  width: 58px;
+  height: 58px;
+}
+
+.ds-map-node--medium .ds-map-node__wrapper {
+  width: 42px;
+  height: 42px;
+}
+
+.ds-map-node--small .ds-map-node__wrapper {
+  width: 26px;
+  height: 26px;
+}
+
+/* ============================================
+   STATE RING (selection/focus indicator)
+   ============================================ */
+
+.ds-map-node--selected .ds-map-node__wrapper {
+  border: 4px solid var(--lightning-blue-200, #92c7fe);
+}
+
+.ds-map-node--focused .ds-map-node__wrapper {
+  border: 4px solid var(--lightning-bluegray-800, #3b4857);
+}
+
+.ds-map-node--medium.ds-map-node--selected .ds-map-node__wrapper,
+.ds-map-node--medium.ds-map-node--focused .ds-map-node__wrapper {
+  border-width: 3px;
+}
+
+.ds-map-node--small.ds-map-node--selected .ds-map-node__wrapper,
+.ds-map-node--small.ds-map-node--focused .ds-map-node__wrapper {
+  border-width: 2px;
+}
+
+/* Square node border radius */
+.ds-map-node--square .ds-map-node__wrapper {
+  border-radius: var(--radius-md);
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__wrapper {
+  border-radius: var(--radius-sm);
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__wrapper {
+  border-radius: var(--radius-sm);
+}
+
+/* Circle node border radius */
+.ds-map-node--circle .ds-map-node__wrapper {
+  border-radius: var(--radius-round);
+}
+
+/* ============================================
+   INNER NODE (the actual icon container)
+   ============================================ */
+
+.ds-map-node__inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+
+  /* Default theme colors - can be overridden via CSS custom properties */
+  --node-bg: var(--lightning-bluegray-50, #f0f3f6);
+  --node-border: var(--lightning-bluegray-300, #c9d6e2);
+  --node-icon-color: var(--lightning-bluegray-600, #63788f);
+
+  background-color: var(--node-bg);
+  border-color: var(--node-border);
+  color: var(--node-icon-color);
+}
+
+/* Square inner node */
+.ds-map-node--square .ds-map-node__inner {
+  border-radius: var(--radius-md);
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__inner {
+  border-radius: var(--radius-sm);
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__inner {
+  border-radius: var(--radius-sm);
+}
+
+/* Circle inner node */
+.ds-map-node--circle .ds-map-node__inner {
+  border-radius: var(--radius-round);
+}
+
+/* Size variants for inner node */
+.ds-map-node--large .ds-map-node__inner {
+  width: 56px;
+  height: 56px;
+}
+
+.ds-map-node--medium .ds-map-node__inner {
+  width: 40px;
+  height: 40px;
+}
+
+.ds-map-node--small .ds-map-node__inner {
+  width: 24px;
+  height: 24px;
+}
+
+/* Icon sizing inside inner node */
+.ds-map-node__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+.ds-map-node--large .ds-map-node__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.ds-map-node--medium .ds-map-node__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-map-node--small .ds-map-node__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.ds-map-node__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ============================================
+   COLOR THEMES
+   ============================================ */
+
+/* Orange theme (Compute resources) */
+.ds-map-node--orange .ds-map-node__inner {
+  --node-bg: var(--lightning-orange-50, #fbefe2);
+  --node-border: var(--lightning-orange-300, #fca24f);
+  --node-icon-color: var(--lightning-orange-600, #ea580c);
+}
+
+/* Rose/Pink theme (Identity) */
+.ds-map-node--rose .ds-map-node__inner {
+  --node-bg: var(--lightning-fuchsia-50, #ffe3f5);
+  --node-border: var(--lightning-fuchsia-400, #ff5cbd);
+  --node-icon-color: var(--lightning-fuchsia-500, #d946ef);
+}
+
+/* Blue theme (Network/Storage) */
+.ds-map-node--blue .ds-map-node__inner {
+  --node-bg: var(--lightning-blue-50, #dbebfe);
+  --node-border: var(--lightning-blue-300, #4b97fa);
+  --node-icon-color: var(--lightning-blue-600, #2366ed);
+}
+
+/* Green theme (Security/Healthy) */
+.ds-map-node--green .ds-map-node__inner {
+  --node-bg: var(--lightning-green-50, #dcfce7);
+  --node-border: var(--lightning-green-300, #4ade80);
+  --node-icon-color: var(--lightning-green-600, #16a34a);
+}
+
+/* Purple theme (Services) */
+.ds-map-node--purple .ds-map-node__inner {
+  --node-bg: var(--lightning-purple-50, #f3e8ff);
+  --node-border: var(--lightning-purple-300, #c084fc);
+  --node-icon-color: var(--lightning-purple-600, #7c3aed);
+}
+
+/* Red theme (Alerts/Critical) */
+.ds-map-node--red .ds-map-node__inner {
+  --node-bg: var(--lightning-red-50, #fef2f2);
+  --node-border: var(--lightning-red-300, #fca5a5);
+  --node-icon-color: var(--lightning-red-600, #dc2626);
+}
+
+/* Gray theme (Default) */
+.ds-map-node--gray .ds-map-node__inner {
+  --node-bg: var(--lightning-gray-50, #f6f8f9);
+  --node-border: var(--lightning-gray-300, #d0d4d9);
+  --node-icon-color: var(--lightning-gray-600, #6b7280);
+}
+
+/* ============================================
+   GLYPHS (badges around the node)
+   ============================================ */
+
+.ds-map-node__glyph {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-round);
+  border: 1px solid var(--lightning-contrast-white, #ffffff);
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Glyph sizes */
+.ds-map-node--large .ds-map-node__glyph {
+  width: 28px;
+  height: 28px;
+}
+
+.ds-map-node--medium .ds-map-node__glyph {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-map-node--small .ds-map-node__glyph {
+  width: 12px;
+  height: 12px;
+}
+
+/* ============================================
+   GLYPH POSITIONS - SQUARE NODE
+   ============================================ */
+
+/* Square: Counter (top-right) */
+.ds-map-node--square .ds-map-node__glyph--counter {
+  top: -5px;
+  right: -5px;
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__glyph--counter {
+  top: -4px;
+  right: -4px;
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__glyph--counter {
+  top: -2px;
+  right: -2px;
+}
+
+/* Square: Status (top-left) */
+.ds-map-node--square .ds-map-node__glyph--status {
+  top: -5px;
+  left: -5px;
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__glyph--status {
+  top: -4px;
+  left: -4px;
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__glyph--status {
+  top: -2px;
+  left: -2px;
+}
+
+/* Square: Tag (bottom-left) */
+.ds-map-node--square .ds-map-node__glyph--tag {
+  bottom: -5px;
+  left: -5px;
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__glyph--tag {
+  bottom: -4px;
+  left: -4px;
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__glyph--tag {
+  bottom: -2px;
+  left: -2px;
+}
+
+/* Square: Provider (bottom-right) */
+.ds-map-node--square .ds-map-node__glyph--provider {
+  bottom: -5px;
+  right: -5px;
+}
+
+.ds-map-node--square.ds-map-node--medium .ds-map-node__glyph--provider {
+  bottom: -4px;
+  right: -4px;
+}
+
+.ds-map-node--square.ds-map-node--small .ds-map-node__glyph--provider {
+  bottom: -2px;
+  right: -2px;
+}
+
+/* ============================================
+   GLYPH POSITIONS - CIRCLE NODE
+   ============================================ */
+
+/* Circle: Counter (bottom-left, 45deg from center) */
+.ds-map-node--circle .ds-map-node__glyph--counter {
+  bottom: 35px;
+  left: 35px;
+}
+
+.ds-map-node--circle.ds-map-node--medium .ds-map-node__glyph--counter {
+  bottom: 26px;
+  left: 26px;
+}
+
+.ds-map-node--circle.ds-map-node--small .ds-map-node__glyph--counter {
+  bottom: 16px;
+  left: 16px;
+}
+
+/* Circle: Status (bottom-right) */
+.ds-map-node--circle .ds-map-node__glyph--status {
+  bottom: 35px;
+  right: 35px;
+}
+
+.ds-map-node--circle.ds-map-node--medium .ds-map-node__glyph--status {
+  bottom: 26px;
+  right: 26px;
+}
+
+.ds-map-node--circle.ds-map-node--small .ds-map-node__glyph--status {
+  bottom: 16px;
+  right: 16px;
+}
+
+/* Circle: Tag (top-right) */
+.ds-map-node--circle .ds-map-node__glyph--tag {
+  top: 35px;
+  right: 35px;
+}
+
+.ds-map-node--circle.ds-map-node--medium .ds-map-node__glyph--tag {
+  top: 26px;
+  right: 26px;
+}
+
+.ds-map-node--circle.ds-map-node--small .ds-map-node__glyph--tag {
+  top: 16px;
+  right: 16px;
+}
+
+/* Circle: Provider (top-left) */
+.ds-map-node--circle .ds-map-node__glyph--provider {
+  top: 35px;
+  left: 35px;
+}
+
+.ds-map-node--circle.ds-map-node--medium .ds-map-node__glyph--provider {
+  top: 26px;
+  left: 26px;
+}
+
+.ds-map-node--circle.ds-map-node--small .ds-map-node__glyph--provider {
+  top: 16px;
+  left: 16px;
+}
+
+/* ============================================
+   GLYPH VARIANTS
+   ============================================ */
+
+/* Counter glyph */
+.ds-map-node__glyph--counter {
+  background-color: var(--lightning-bluegray-600, #63788f);
+  color: var(--lightning-contrast-white, #ffffff);
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-xs);
+  font-weight: var(--weight-medium);
+  padding: 0 3px;
+}
+
+.ds-map-node--small .ds-map-node__glyph--counter {
+  font-size: var(--font-size-caption-xs);
+  padding: 0 2px;
+}
+
+/* Expand button (hover state) */
+.ds-map-node__glyph--expand {
+  background-color: var(--lightning-contrast-white, #ffffff);
+  border-color: var(--lightning-bluegray-200, #dfe6ed);
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-map-node__glyph--expand svg {
+  width: 60%;
+  height: 60%;
+}
+
+/* Status glyph (success) */
+.ds-map-node__glyph--status {
+  background-color: var(--lightning-green-500, #12a732);
+  color: var(--lightning-contrast-white, #ffffff);
+}
+
+.ds-map-node__glyph--status svg {
+  width: 70%;
+  height: 70%;
+}
+
+/* Tag glyph */
+.ds-map-node__glyph--tag {
+  background-color: var(--lightning-gray-25, #f7f9fa);
+}
+
+.ds-map-node__glyph--tag svg,
+.ds-map-node__glyph--tag img {
+  width: 60%;
+  height: 60%;
+}
+
+/* Provider glyph (3rd party icons) */
+.ds-map-node__glyph--provider {
+  background-color: var(--lightning-contrast-white, #ffffff);
+  border-color: var(--lightning-bluegray-200, #dfe6ed);
+}
+
+.ds-map-node__glyph--provider svg,
+.ds-map-node__glyph--provider img {
+  width: 60%;
+  height: 60%;
+}
+
+/* ============================================
+   LABELS
+   ============================================ */
+
+.ds-map-node__labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.ds-map-node__label {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-weight: var(--weight-regular);
+  color: var(--lightning-gray-900, #1d2024);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.ds-map-node--large .ds-map-node__label {
+  font-size: var(--font-size-text-s);
+}
+
+.ds-map-node--medium .ds-map-node__label {
+  font-size: var(--font-size-caption-s);
+}
+
+.ds-map-node--small .ds-map-node__label {
+  font-size: 8px;
+}
+
+/* Selected state label highlight */
+.ds-map-node--selected .ds-map-node__label {
+  background-color: var(--lightning-blue-200, #92c7fe);
+  padding: 0 1px;
+  border-radius: 2px;
+}
+
+.ds-map-node__sublabel {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-weight: var(--weight-regular);
+  color: var(--lightning-gray-700, #575d65);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.ds-map-node--large .ds-map-node__sublabel {
+  font-size: var(--font-size-text-xs);
+}
+
+.ds-map-node--medium .ds-map-node__sublabel {
+  font-size: var(--font-size-caption-xs);
+}
+
+.ds-map-node--small .ds-map-node__sublabel {
+  font-size: 6px;
+}

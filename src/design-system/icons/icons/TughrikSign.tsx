@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const TughrikSign: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M8 12.5L16 9M8 16.5L16 13M12 20V4M12 4H5M12 4H19" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M4 4C4 3.44772 4.44772 3 5 3H19C19.5523 3 20 3.44772 20 4C20 4.55228 19.5523 5 19 5H13V9.22098L15.5992 8.08384C16.1052 7.86248 16.6948 8.0932 16.9162 8.59918C17.1375 9.10516 16.9068 9.69479 16.4008 9.91616L13 11.404V13.221L15.5992 12.0838C16.1052 11.8625 16.6948 12.0932 16.9162 12.5992C17.1375 13.1052 16.9068 13.6948 16.4008 13.9162L13 15.404V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V16.279L8.40082 17.4162C7.89484 17.6375 7.30521 17.4068 7.08384 16.9008C6.86248 16.3948 7.0932 15.8052 7.59918 15.5838L11 14.096V12.279L8.40082 13.4162C7.89484 13.6375 7.30521 13.4068 7.08384 12.9008C6.86248 12.3948 7.0932 11.8052 7.59918 11.5838L11 10.096V5H5C4.44772 5 4 4.55228 4 4Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('tughrik-sign', TughrikSign);

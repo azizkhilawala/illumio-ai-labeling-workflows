@@ -1,0 +1,36 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const Manage: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><circle cx="9" cy="9" r="9" fill={color}/>
+<g clip-path="url(#clip0_1218_14226)">
+<path d="M14.173 5.56852L12.8907 6.79648H11.1899V5.20116L12.411 3.82693C11.913 3.65144 11.3758 3.61929 10.8604 3.73415C10.345 3.84902 9.87226 4.10627 9.49591 4.47663C9.12302 4.85715 8.86224 5.3331 8.74222 5.85218C8.6222 6.37126 8.64759 6.91338 8.81561 7.41896L3.82554 12.4226C3.70754 12.5671 3.65166 12.7524 3.67015 12.938C3.68865 13.1235 3.78 13.2942 3.92418 13.4125L4.60449 14.0758C4.72278 14.22 4.89344 14.3113 5.07902 14.3298C5.26459 14.3483 5.44992 14.2924 5.59434 14.1744L10.5708 9.17076C11.0769 9.33906 11.6196 9.3646 12.1393 9.24458C12.659 9.12457 13.1355 8.86363 13.5165 8.49045C13.8893 8.11422 14.1486 7.6406 14.2647 7.12384C14.3808 6.60708 14.3491 6.06806 14.173 5.56852Z" fill={color}/>
+</g>
+<defs>
+<clipPath id="clip0_1218_14226">
+<rect width="12" height="12" fill={color} transform="translate(3 3)"/>
+</clipPath>
+</defs></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('manage', Manage);

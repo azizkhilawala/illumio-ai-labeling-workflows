@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const Monument: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M7 21L9 5L12 3L15 5L17 21M11 14H13M5 21H19" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M11.4453 2.16795C11.7812 1.94402 12.2188 1.94402 12.5547 2.16795L15.5547 4.16795C15.7965 4.32916 15.9562 4.58759 15.9923 4.87597L17.8828 20H19C19.5523 20 20 20.4477 20 21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21C4 20.4477 4.44772 20 5 20H6.11722L8.00772 4.87597C8.04377 4.58759 8.20349 4.32916 8.4453 4.16795L11.4453 2.16795ZM11 13C10.4477 13 10 13.4477 10 14C10 14.5523 10.4477 15 11 15H13C13.5523 15 14 14.5523 14 14C14 13.4477 13.5523 13 13 13H11Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('monument', Monument);

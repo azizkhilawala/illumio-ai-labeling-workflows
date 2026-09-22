@@ -1,0 +1,130 @@
+/* Breadcrumb Component - Figma node-id=183-15979, 163-12277 */
+
+/* ===========================================
+   Breadcrumb Container
+   =========================================== */
+.ds-breadcrumb {
+  display: flex;
+  align-items: center;
+}
+
+.ds-breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2); /* 4px */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ds-breadcrumb__list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2); /* 4px */
+}
+
+/* ===========================================
+   Breadcrumb Separator
+   =========================================== */
+.ds-breadcrumb__separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lightning-bluegray-400);
+  flex-shrink: 0;
+}
+
+.ds-breadcrumb__separator svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ===========================================
+   Breadcrumb Item - Base Styles
+   =========================================== */
+.ds-breadcrumb-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1); /* 2px */
+  padding: var(--spacing-1); /* 2px */
+  border-radius: var(--spacing-1); /* 2px */
+  overflow: hidden;
+  font-family: var(--family-font-family-default);
+  font-size: var(--font-size-text-s); /* 13px */
+  font-weight: var(--weight-medium); /* 500 */
+  line-height: 1;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* ===========================================
+   Breadcrumb Item - Icon
+   =========================================== */
+.ds-breadcrumb-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.ds-breadcrumb-item__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ===========================================
+   Breadcrumb Item - Label
+   =========================================== */
+.ds-breadcrumb-item__label {
+  flex-shrink: 0;
+}
+
+/* ===========================================
+   Breadcrumb Item States
+   =========================================== */
+
+/* Default State (link) */
+a.ds-breadcrumb-item {
+  color: var(--lightning-bluegray-600);
+  cursor: pointer;
+}
+
+/* Hover State */
+a.ds-breadcrumb-item:hover {
+  background-color: var(--lightning-bluegray-200);
+  color: var(--lightning-bluegray-700);
+}
+
+/* Focus State */
+a.ds-breadcrumb-item:focus {
+  outline: none;
+  background-color: var(--lightning-bluegray-200);
+  color: var(--lightning-bluegray-700);
+  border: 1px solid var(--lightning-blue-500);
+  box-shadow: 0 0 0 2px #B5DAFB;
+}
+
+/* Focus-visible for keyboard navigation */
+a.ds-breadcrumb-item:focus-visible {
+  outline: none;
+  background-color: var(--lightning-bluegray-200);
+  color: var(--lightning-bluegray-700);
+  border: 1px solid var(--lightning-blue-500);
+  box-shadow: 0 0 0 2px #B5DAFB;
+}
+
+/* Active State (mouse down) */
+a.ds-breadcrumb-item:active {
+  background-color: var(--lightning-bluegray-200);
+  color: var(--lightning-bluegray-800);
+}
+
+/* Non-link State (current page) */
+span.ds-breadcrumb-item,
+.ds-breadcrumb-item--non-link {
+  color: var(--lightning-bluegray-400);
+  cursor: default;
+}

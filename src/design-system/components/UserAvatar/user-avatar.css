@@ -1,0 +1,76 @@
+/* UserAvatar Component - Figma node-id=163-12056 */
+
+/* ===========================================
+   Base Styles
+   =========================================== */
+.ds-user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-round, 9999px);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* ===========================================
+   Size Variants
+   =========================================== */
+.ds-user-avatar--sm {
+  width: 32px;
+  height: 32px;
+}
+
+.ds-user-avatar--md {
+  width: 40px;
+  height: 40px;
+}
+
+.ds-user-avatar--lg {
+  width: 48px;
+  height: 48px;
+}
+
+/* ===========================================
+   Image Variant
+   =========================================== */
+.ds-user-avatar--image {
+  background-color: var(--lightning-gray-100);
+}
+
+.ds-user-avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-round, 9999px);
+}
+
+/* ===========================================
+   Initials Variant
+   =========================================== */
+.ds-user-avatar--initials {
+  background-color: var(--lightning-contrast-white, white);
+  border: 1px solid var(--lightning-gray-200, #dbdfe2);
+  box-shadow: 0px 1px 3px 0px rgba(31, 39, 47, 0.1);
+}
+
+.ds-user-avatar__initials {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--lightning-bluegray-900, #020617);
+  text-transform: uppercase;
+  line-height: 1;
+  user-select: none;
+}
+
+/* Initials font size by avatar size */
+.ds-user-avatar--sm .ds-user-avatar__initials {
+  font-size: var(--font-size-text-s, 13px);
+}
+
+.ds-user-avatar--md .ds-user-avatar__initials {
+  font-size: 16px;
+}
+
+.ds-user-avatar--lg .ds-user-avatar__initials {
+  font-size: 18px;
+}

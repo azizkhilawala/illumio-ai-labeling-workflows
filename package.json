@@ -1,0 +1,55 @@
+{
+  "name": "design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A modern React component library built with Lightning design tokens",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "verify": "npm run db:generate && npm run lint && npm run build",
+    "start": "next start",
+    "lint": "eslint",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:push": "prisma db push",
+    "db:seed": "npx tsx prisma/seed.ts",
+    "db:studio": "prisma studio",
+    "db:reset": "prisma migrate reset --force && npm run db:seed",
+    "prisma:dev": "prisma dev"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@prisma/adapter-pg": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "@prisma/extension-accelerate": "^3.0.1",
+    "@tanstack/react-query": "^5.99.0",
+    "@tanstack/react-query-devtools": "^5.99.0",
+    "ag-charts-community": "^13.1.0",
+    "ag-charts-react": "^13.1.0",
+    "ag-grid-community": "^35.1.0",
+    "ag-grid-react": "^35.1.0",
+    "csv-parse": "^6.2.1",
+    "dotenv": "^17.4.2",
+    "framer-motion": "^12.38.0",
+    "next": "16.1.6",
+    "pg": "^8.20.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "sonner": "^2.0.7",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "prisma": "^7.7.0",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}

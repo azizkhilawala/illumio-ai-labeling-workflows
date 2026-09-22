@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ToiletPaperBlank: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M15 10C15 13.3137 16.3431 16 18 16C19.6569 16 21 13.3137 21 10C21 6.68629 19.6569 4 18 4M15 10C15 6.68629 16.3431 4 18 4M15 10V14C15 15.8441 14.4749 18.7262 14 20H3C3.47493 18.7262 4 15.8441 4 14V10C4 6.68629 5.34315 4 7 4H18" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M7.00001 3H18C19.4113 3 20.4197 4.11805 21.0158 5.31015C21.6417 6.56205 22 8.22156 22 10C22 11.7784 21.6417 13.4379 21.0158 14.6899C20.4197 15.8819 19.4113 17 18 17C17.1378 17 16.426 16.5827 15.8667 15.9861C15.6738 17.621 15.3 19.3757 14.937 20.3494C14.7911 20.7406 14.4175 21 14 21H3.00001C2.67236 21 2.3655 20.8395 2.17862 20.5704C1.99174 20.3012 1.94855 19.9576 2.06301 19.6506C2.4924 18.499 3.00001 15.7364 3.00001 14V10C3.00001 8.22156 3.35831 6.56205 3.98426 5.31015C4.5803 4.11805 5.58875 3 7.00001 3ZM16.7731 13.7954C16.3133 12.8758 16 11.5353 16 10C16 8.46473 16.3133 7.12424 16.7731 6.20457C17.2629 5.22509 17.7544 5 18 5C18.2456 5 18.7372 5.22509 19.2269 6.20457C19.6867 7.12424 20 8.46473 20 10C20 11.5353 19.6867 12.8758 19.2269 13.7954C18.7372 14.7749 18.2456 15 18 15C17.7544 15 17.2629 14.7749 16.7731 13.7954Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('toilet-paper-blank', ToiletPaperBlank);

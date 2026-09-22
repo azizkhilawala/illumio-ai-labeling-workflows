@@ -1,0 +1,67 @@
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+}
+
+.resourceContext {
+  font-size: 13px;
+  color: var(--text-secondary);
+  padding: 8px 12px;
+  background: var(--lightning-bluegray-50, #f4f7fa);
+  border-radius: 6px;
+  margin-bottom: 16px;
+}
+
+.errorList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.errorGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.errorHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.errorIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.errorReason {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.dependencyList {
+  margin: 4px 0 0 28px;
+  padding: 0;
+  list-style: disc;
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.dependencyLink {
+  color: var(--lightning-blue-600, #2366ed);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.dependencyLink:hover {
+  text-decoration: underline;
+}
+
+.affectedResources {
+  color: var(--text-muted);
+  font-size: 12px;
+}

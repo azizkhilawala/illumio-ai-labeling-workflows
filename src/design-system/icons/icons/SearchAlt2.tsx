@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const SearchAlt2: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M11 6C13.7614 6 16 8.23858 16 11M16.6588 16.6549L21 21M19 11C19 15.4183 15.4183 19 11 19C6.58172 19 3 15.4183 3 11C3 6.58172 6.58172 3 11 3C15.4183 3 19 6.58172 19 11Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C13.1259 20 15.0796 19.2629 16.6195 18.0304L20.2926 21.7068C20.6829 22.0975 21.3161 22.0978 21.7068 21.7074C22.0975 21.3171 22.0978 20.6839 21.7074 20.2932L18.0334 16.6159C19.2641 15.0765 20 13.1242 20 11C20 6.02944 15.9706 2 11 2ZM11 5C10.4477 5 10 5.44772 10 6C10 6.55228 10.4477 7 11 7C13.2091 7 15 8.79086 15 11C15 11.5523 15.4477 12 16 12C16.5523 12 17 11.5523 17 11C17 7.68629 14.3137 5 11 5Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('search-alt-2', SearchAlt2);

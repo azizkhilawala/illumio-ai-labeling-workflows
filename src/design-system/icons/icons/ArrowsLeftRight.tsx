@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowsLeftRight: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M3 12H21M3 12L7 8M3 12L7 16M21 12L17 16M21 12L17 8" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M7.70723 7.29289C8.09775 7.68342 8.09775 8.31658 7.70723 8.70711L5.41434 11H18.5859L16.293 8.70711C15.9025 8.31658 15.9025 7.68342 16.293 7.29289C16.6835 6.90237 17.3167 6.90237 17.7072 7.29289L21.7072 11.2929C22.0978 11.6834 22.0978 12.3166 21.7072 12.7071L17.7072 16.7071C17.3167 17.0976 16.6835 17.0976 16.293 16.7071C15.9025 16.3166 15.9025 15.6834 16.293 15.2929L18.5859 13H5.41434L7.70723 15.2929C8.09775 15.6834 8.09775 16.3166 7.70723 16.7071C7.3167 17.0976 6.68354 17.0976 6.29302 16.7071L2.29302 12.7071C1.90249 12.3166 1.90249 11.6834 2.29302 11.2929L6.29302 7.29289C6.68354 6.90237 7.3167 6.90237 7.70723 7.29289Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrows-left-right', ArrowsLeftRight);

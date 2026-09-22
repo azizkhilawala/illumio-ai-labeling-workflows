@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowNarrowUp: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 4V20M12 4L8 8M12 4L16 8" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12.0001 3C12.2653 3 12.5197 3.10536 12.7072 3.29289L16.7072 7.29289C17.0978 7.68342 17.0978 8.31658 16.7072 8.70711C16.3167 9.09763 15.6835 9.09763 15.293 8.70711L13.0001 6.41421V20C13.0001 20.5523 12.5524 21 12.0001 21C11.4478 21 11.0001 20.5523 11.0001 20V6.41421L8.70723 8.70711C8.3167 9.09763 7.68354 9.09763 7.29302 8.70711C6.90249 8.31658 6.90249 7.68342 7.29302 7.29289L11.293 3.29289C11.4806 3.10536 11.7349 3 12.0001 3Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-narrow-up', ArrowNarrowUp);

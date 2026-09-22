@@ -1,0 +1,42 @@
+/* Icon System Styles */
+
+.ds-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: currentColor;
+  vertical-align: middle;
+}
+
+/* Size variants */
+.ds-icon--12 {
+  width: 12px;
+  height: 12px;
+}
+
+.ds-icon--16 {
+  width: 16px;
+  height: 16px;
+}
+
+.ds-icon--20 {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-icon--24 {
+  width: 24px;
+  height: 24px;
+}
+
+.ds-icon--32 {
+  width: 32px;
+  height: 32px;
+}
+
+/* Ensure SVG fills container */
+.ds-icon svg {
+  width: 100%;
+  height: 100%;
+}

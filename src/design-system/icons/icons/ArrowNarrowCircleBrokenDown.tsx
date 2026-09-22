@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowNarrowCircleBrokenDown: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M11 16L15 12M15 12L11 8M15 12H3M4.51555 17C6.13007 19.412 8.87958 21 12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C8.87958 3 6.13007 4.58803 4.51555 7" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path d="M11.9999 22C17.5228 22 21.9999 17.5228 21.9999 12C21.9999 6.47715 17.5228 2 11.9999 2C6.81459 2 2.55104 5.94668 2.04932 11H12.5857L10.2928 8.70711C9.90231 8.31658 9.90231 7.68342 10.2928 7.29289C10.6834 6.90237 11.3165 6.90237 11.707 7.29289L15.707 11.2929C16.0976 11.6834 16.0976 12.3166 15.707 12.7071L11.707 16.7071C11.3165 17.0976 10.6834 17.0976 10.2928 16.7071C9.90231 16.3166 9.90231 15.6834 10.2928 15.2929L12.5857 13H2.04932C2.55104 18.0533 6.81459 22 11.9999 22Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-narrow-circle-broken-down', ArrowNarrowCircleBrokenDown);

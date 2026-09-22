@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const TreeDecorated: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 9H12.01M14 14H14.01M11 18H11.01M20 21H4L8 16H5L9 11H6L12 3L18 11H15L19 16H16L20 21Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12 2C12.3148 2 12.6112 2.14819 12.8 2.4L18.8 10.4C19.0273 10.703 19.0638 11.1084 18.8944 11.4472C18.725 11.786 18.3788 12 18 12H17.0806L19.7809 15.3753C20.021 15.6755 20.0678 16.0867 19.9013 16.4332C19.7348 16.7797 19.3844 17 19 17H18.0806L20.7809 20.3753C21.021 20.6755 21.0678 21.0867 20.9013 21.4332C20.7348 21.7797 20.3844 22 20 22H4.00001C3.6156 22 3.26523 21.7797 3.09871 21.4332C2.93219 21.0867 2.979 20.6755 3.21914 20.3753L5.91938 17H5.00001C4.6156 17 4.26523 16.7797 4.09871 16.4332C3.93219 16.0867 3.979 15.6755 4.21914 15.3753L6.91938 12H6.00001C5.62124 12 5.27497 11.786 5.10558 11.4472C4.93619 11.1084 4.97275 10.703 5.20001 10.4L11.2 2.4C11.3889 2.14819 11.6853 2 12 2ZM12 8C11.4477 8 11 8.44772 11 9C11 9.55228 11.4477 10 12 10H12.01C12.5623 10 13.01 9.55228 13.01 9C13.01 8.44772 12.5623 8 12.01 8H12ZM14 13C13.4477 13 13 13.4477 13 14C13 14.5523 13.4477 15 14 15H14.01C14.5623 15 15.01 14.5523 15.01 14C15.01 13.4477 14.5623 13 14.01 13H14ZM11 17C10.4477 17 10 17.4477 10 18C10 18.5523 10.4477 19 11 19H11.01C11.5623 19 12.01 18.5523 12.01 18C12.01 17.4477 11.5623 17 11.01 17H11Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('tree-decorated', TreeDecorated);

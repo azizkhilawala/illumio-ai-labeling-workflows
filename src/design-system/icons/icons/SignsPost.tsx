@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const SignsPost: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 3V4M12 9V12M12 17V21M4 4H19L21 6.5L19 9H4V4ZM20 12H5L3 14.5L5 17H20V12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12 2C12.5523 2 13 2.44772 13 3H19C19.3038 3 19.5911 3.13809 19.7809 3.3753L21.7809 5.8753C22.073 6.24052 22.073 6.75948 21.7809 7.12469L19.7809 9.62469C19.5911 9.86191 19.3038 10 19 10H13V11H20C20.5523 11 21 11.4477 21 12V17C21 17.5523 20.5523 18 20 18H13V21C13 21.5523 12.5523 22 12 22C11.4477 22 11 21.5523 11 21V18H5C4.69622 18 4.4089 17.8619 4.21913 17.6247L2.21913 15.1247C1.92696 14.7595 1.92696 14.2405 2.21913 13.8753L4.21913 11.3753C4.4089 11.1381 4.69622 11 5 11H11V10H4C3.44772 10 3 9.55228 3 9V4C3 3.44772 3.44772 3 4 3H11C11 2.44772 11.4477 2 12 2ZM5.48062 13L4.28062 14.5L5.48062 16H19V13H5.48062Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('signs-post', SignsPost);

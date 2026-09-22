@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowCircleUpRight: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M15 13.5V9M15 9H10.5M15 9L9.00019 14.9999M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12ZM10.4998 8C9.94753 8 9.49981 8.44772 9.49981 9C9.49981 9.55228 9.94753 10 10.4998 10H12.5856L8.29289 14.2928C7.90237 14.6834 7.90237 15.3165 8.2929 15.7071C8.68343 16.0976 9.31659 16.0976 9.70711 15.707L13.9998 11.4143V13.5C13.9998 14.0523 14.4475 14.5 14.9998 14.5C15.5521 14.5 15.9998 14.0523 15.9998 13.5V9C15.9998 8.44772 15.5521 8 14.9998 8H10.4998Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-circle-up-right', ArrowCircleUpRight);

@@ -1,0 +1,28 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const CspOci: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 20 20"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M3.6687 6.57495C4.57708 5.66657 5.80911 5.15625 7.09375 5.15625H12.9062C14.1909 5.15625 15.4229 5.66657 16.3313 6.57495C17.2397 7.48333 17.75 8.71536 17.75 10C17.75 11.2846 17.2397 12.5167 16.3313 13.425C15.4229 14.3334 14.1909 14.8437 12.9062 14.8437H7.09375C5.80911 14.8437 4.57708 14.3334 3.6687 13.425C2.76032 12.5167 2.25 11.2846 2.25 10C2.25 8.71536 2.76032 7.48333 3.6687 6.57495ZM7.09375 7.09375C6.32296 7.09375 5.58375 7.39994 5.03872 7.94497C4.49369 8.49 4.1875 9.22921 4.1875 10C4.1875 10.7708 4.49369 11.51 5.03872 12.055C5.58375 12.6001 6.32296 12.9062 7.09375 12.9062H12.9062C13.677 12.9062 14.4163 12.6001 14.9613 12.055C15.5063 11.51 15.8125 10.7708 15.8125 10C15.8125 9.22921 15.5063 8.49 14.9613 7.94497C14.4163 7.39994 13.677 7.09375 12.9062 7.09375H7.09375Z" fill="#C74634"/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('csp-oci', CspOci);

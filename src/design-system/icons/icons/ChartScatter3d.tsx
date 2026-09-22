@@ -1,0 +1,38 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ChartScatter3d: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 4V14M12 14L4 20M12 14L20 20M12 20H12.01M4 13H4.01M17 13H17.01M8 9H8.01M20 9H20.01M5 5H5.01M18 5H18.01" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path d="M12.0001 3C12.5523 3 13.0001 3.44772 13.0001 4V13.5L20.6001 19.2C21.0419 19.5314 21.1314 20.1582 20.8001 20.6C20.4687 21.0418 19.8419 21.1314 19.4001 20.8L12.0001 15.25L4.60006 20.8C4.15823 21.1314 3.53143 21.0418 3.20006 20.6C2.86869 20.1582 2.95823 19.5314 3.40006 19.2L11.0001 13.5V4C11.0001 3.44772 11.4478 3 12.0001 3Z" fill={color}/>
+<path d="M9 9C9 9.55229 8.55229 10 8 10C7.44772 10 7 9.55229 7 9C7 8.44771 7.44772 8 8 8C8.55229 8 9 8.44771 9 9Z" fill={color}/>
+<path d="M6 5C6 5.55228 5.55228 6 5 6C4.44772 6 4 5.55228 4 5C4 4.44772 4.44772 4 5 4C5.55228 4 6 4.44772 6 5Z" fill={color}/>
+<path d="M5 13C5 13.5523 4.55228 14 4 14C3.44772 14 3 13.5523 3 13C3 12.4477 3.44772 12 4 12C4.55228 12 5 12.4477 5 13Z" fill={color}/>
+<path d="M18 13C18 13.5523 17.5523 14 17 14C16.4477 14 16 13.5523 16 13C16 12.4477 16.4477 12 17 12C17.5523 12 18 12.4477 18 13Z" fill={color}/>
+<path d="M21 9C21 9.55229 20.5523 10 20 10C19.4477 10 19 9.55229 19 9C19 8.44771 19.4477 8 20 8C20.5523 8 21 8.44771 21 9Z" fill={color}/>
+<path d="M19 5C19 5.55228 18.5523 6 18 6C17.4477 6 17 5.55228 17 5C17 4.44772 17.4477 4 18 4C18.5523 4 19 4.44772 19 5Z" fill={color}/>
+<path d="M12 21C12.5523 21 13 20.5523 13 20C13 19.4477 12.5523 19 12 19C11.4477 19 11 19.4477 11 20C11 20.5523 11.4477 21 12 21Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('chart-scatter-3d', ChartScatter3d);

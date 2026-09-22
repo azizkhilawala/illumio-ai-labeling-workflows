@@ -1,0 +1,30 @@
+import React from 'react';
+import type { PillIconComponentProps } from '../types';
+import { registerPillIcon } from '../registry';
+
+export const Idle: React.FC<PillIconComponentProps> = ({
+  size = 18,
+  bgColor = 'var(--lightning-bluegray-600)',
+  iconColor = 'var(--lightning-contrast-white)',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-pill-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background circle */}
+      <circle cx="9" cy="9" r="9" fill={bgColor} />
+      {/* Icon content */}
+      <g >
+<path d="M13 3.66663C13.7364 3.66663 14.3333 4.26358 14.3333 4.99996V13C14.3333 13.7363 13.7364 14.3333 13 14.3333H5C4.26362 14.3333 3.66667 13.7363 3.66667 13V4.99996C3.66667 4.26358 4.26362 3.66663 5 3.66663H13ZM9 8.99996L4.66667 13.3333H13.3333L9 8.99996ZM13.3333 4.66663H4.66667L9 8.99996L13.3333 4.66663Z" fill={iconColor}/>
+</g>
+    </svg>
+  );
+};
+
+registerPillIcon('idle', Idle);

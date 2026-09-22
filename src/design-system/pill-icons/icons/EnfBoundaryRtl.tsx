@@ -1,0 +1,29 @@
+import React from 'react';
+import type { PillIconComponentProps } from '../types';
+import { registerPillIcon } from '../registry';
+
+export const EnfBoundaryRtl: React.FC<PillIconComponentProps> = ({
+  size = 18,
+  bgColor = 'var(--lightning-bluegray-600)',
+  iconColor = 'var(--lightning-contrast-white)',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-pill-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background circle */}
+      <circle cx="9" cy="9" r="9" fill={bgColor} />
+      {/* Icon content */}
+      <path d="M10.3655 11.4083V9.48627H15.6V8.42301H10.3655V6.50098L7.46202 8.95464L10.3655 11.4083Z" fill={iconColor}/>
+<path d="M2.8 4.70166V13.6984H6.88944V4.70166H2.8ZM3.61789 8.34126L6.07155 10.7949V12.1035L3.61789 9.64988V8.34126ZM6.07155 9.64988L3.61789 7.19622V5.8876L6.07155 8.34126V9.64988ZM6.07155 5.60134V7.19622L4.47667 5.60134H6.07155ZM3.61789 12.7987V10.7949L5.62171 12.7987H3.61789Z" fill={iconColor}/>
+    </svg>
+  );
+};
+
+registerPillIcon('enf-boundary-rtl', EnfBoundaryRtl);

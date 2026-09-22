@@ -1,0 +1,35 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const SignalSlash: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M20 4V14.3945M16 16V20M16 8V10.399M12 12V20M8 16V20M4 19V20M3 3L21 21" stroke={color} strokeWidth="2" strokeLinecap="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path d="M3.70711 2.29289C3.31658 1.90237 2.68342 1.90237 2.29289 2.29289C1.90237 2.68342 1.90237 3.31658 2.29289 3.70711L11 12.4142V20C11 20.5523 11.4477 21 12 21C12.5523 21 13 20.5523 13 20V14.4142L15 16.4142V20C15 20.5523 15.4477 21 16 21C16.5523 21 17 20.5523 17 20V18.4142L20.2929 21.7071C20.6834 22.0976 21.3166 22.0976 21.7071 21.7071C22.0976 21.3166 22.0976 20.6834 21.7071 20.2929L3.70711 2.29289Z" fill={color}/>
+<path d="M19 14.786V4C19 3.44772 19.4477 3 20 3C20.5523 3 21 3.44772 21 4V16.786L19 14.786Z" fill={color}/>
+<path d="M15 10.786L17 12.786V8C17 7.44772 16.5523 7 16 7C15.4477 7 15 7.44772 15 8V10.786Z" fill={color}/>
+<path d="M9 16C9 15.4477 8.55228 15 8 15C7.44772 15 7 15.4477 7 16V20C7 20.5523 7.44772 21 8 21C8.55228 21 9 20.5523 9 20V16Z" fill={color}/>
+<path d="M4 18C4.55228 18 5 18.4477 5 19V20C5 20.5523 4.55228 21 4 21C3.44772 21 3 20.5523 3 20V19C3 18.4477 3.44772 18 4 18Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('signal-slash', SignalSlash);

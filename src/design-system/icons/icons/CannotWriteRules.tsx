@@ -1,0 +1,32 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const CannotWriteRules: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><circle cx="9" cy="9" r="9" fill={color}/>
+<path fillRule="evenodd" clipRule="evenodd" d="M11.4807 6.68481V8.33856H9.8269V9.66156H11.4807V11.3153L16.1111 9.00006L11.4807 6.68481Z" fill={color}/>
+<path d="M3.87341 8.3385H1.88892V9.6615H3.87341V8.3385Z" fill={color}/>
+<path d="M6.51941 8.3385H4.53491V9.6615H6.51941V8.3385Z" fill={color}/>
+<path d="M9.1654 8.3385H7.18091V9.6615H9.1654V8.3385Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('cannot-write-rules', CannotWriteRules);

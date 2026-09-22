@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowRight: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12.2931 5.29289C12.6837 4.90237 13.3168 4.90237 13.7074 5.29289L19.7074 11.2929C19.8949 11.4804 20.0002 11.7348 20.0002 12C20.0002 12.2652 19.8949 12.5196 19.7074 12.7071L13.7074 18.7071C13.3168 19.0976 12.6837 19.0976 12.2931 18.7071C11.9026 18.3166 11.9026 17.6834 12.2931 17.2929L16.586 13H5.00024C4.44796 13 4.00024 12.5523 4.00024 12C4.00024 11.4477 4.44796 11 5.00024 11H16.586L12.2931 6.70711C11.9026 6.31658 11.9026 5.68342 12.2931 5.29289Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-right', ArrowRight);

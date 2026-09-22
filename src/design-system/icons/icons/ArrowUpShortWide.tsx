@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowUpShortWide: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M7 3V21M7 3L11 7M7 3L3 7M14 3H15M14 9H17M14 15H19M14 21H21" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M6.29302 2.29289C6.68354 1.90237 7.3167 1.90237 7.70723 2.29289L11.7072 6.29289C12.0978 6.68342 12.0978 7.31658 11.7072 7.70711C11.3167 8.09763 10.6835 8.09763 10.293 7.70711L8.00012 5.41421V21C8.00012 21.5523 7.55241 22 7.00012 22C6.44784 22 6.00012 21.5523 6.00012 21V5.41421L3.70723 7.70711C3.3167 8.09763 2.68354 8.09763 2.29302 7.70711C1.90249 7.31658 1.90249 6.68342 2.29302 6.29289L6.29302 2.29289ZM15.0001 4H14.0001C13.4478 4 13.0001 3.55228 13.0001 3C13.0001 2.44772 13.4478 2 14.0001 2H15.0001C15.5524 2 16.0001 2.44772 16.0001 3C16.0001 3.55228 15.5524 4 15.0001 4ZM13.0001 9C13.0001 8.44772 13.4478 8 14.0001 8H17.0001C17.5524 8 18.0001 8.44772 18.0001 9C18.0001 9.55228 17.5524 10 17.0001 10H14.0001C13.4478 10 13.0001 9.55228 13.0001 9ZM13.0001 15C13.0001 14.4477 13.4478 14 14.0001 14H19.0001C19.5524 14 20.0001 14.4477 20.0001 15C20.0001 15.5523 19.5524 16 19.0001 16H14.0001C13.4478 16 13.0001 15.5523 13.0001 15ZM13.0001 21C13.0001 20.4477 13.4478 20 14.0001 20H21.0001C21.5524 20 22.0001 20.4477 22.0001 21C22.0001 21.5523 21.5524 22 21.0001 22H14.0001C13.4478 22 13.0001 21.5523 13.0001 21Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-up-short-wide', ArrowUpShortWide);

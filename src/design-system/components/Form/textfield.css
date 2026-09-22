@@ -1,0 +1,306 @@
+/* TextField Component - Based on Lightning Design System */
+
+/* ============================================
+   FIELD CONTAINER
+   ============================================ */
+
+.ds-textfield {
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset-small);
+  width: 100%;
+}
+
+/* Horizontal orientation */
+.ds-textfield--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: var(--offset-large);
+}
+
+.ds-textfield--horizontal .ds-textfield__label {
+  min-width: 120px;
+  padding-top: 10px;
+  flex-shrink: 0;
+}
+
+/* ============================================
+   LABEL
+   ============================================ */
+
+.ds-textfield__label {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--lightning-bluegray-600, #63788f);
+  line-height: 1;
+}
+
+.ds-textfield__label--required::after {
+  content: " *";
+  color: var(--lightning-red-600, #dc2626);
+}
+
+/* ============================================
+   INPUT WRAPPER (for icon positioning)
+   ============================================ */
+
+.ds-textfield__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset-xs-small);
+  flex: 1;
+}
+
+.ds-textfield__input-container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* ============================================
+   INPUT BASE STYLES
+   ============================================ */
+
+.ds-textfield__input {
+  width: 100%;
+  padding: var(--offset-small) var(--offset-medium);
+  border: 1px solid var(--lightning-bluegray-200, #c9d6e2);
+  border-radius: var(--radius-md);
+  background-color: var(--lightning-contrast-white, #ffffff);
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-m, 14px);
+  font-weight: var(--weight-regular, 400);
+  color: var(--lightning-bluegray-900, #1f272f);
+  line-height: 1.5;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.ds-textfield__input::placeholder {
+  color: var(--lightning-bluegray-500, #a3b6c7);
+}
+
+/* Input with icon */
+.ds-textfield__input--with-icon {
+  padding-right: 36px;
+}
+
+/* Short size (single line) */
+.ds-textfield__input--short {
+  height: 40px;
+}
+
+/* Long size (textarea) */
+.ds-textfield__input--long {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ============================================
+   INPUT STATES - DEFAULT TYPE
+   ============================================ */
+
+.ds-textfield__input:hover:not(:disabled):not(:focus) {
+  border-color: var(--lightning-blue-400, #4b97fa);
+}
+
+.ds-textfield__input:focus {
+  border-color: var(--lightning-blue-300, #92c7fe);
+  box-shadow: 0 0 0 3px var(--lightning-blue-50, #dbebfe);
+}
+
+.ds-textfield__input:disabled {
+  background-color: var(--lightning-gray-100, #eef1f3);
+  color: var(--lightning-bluegray-400, #b6c7d9);
+  cursor: not-allowed;
+}
+
+/* ============================================
+   INPUT STATES - ERROR TYPE
+   ============================================ */
+
+.ds-textfield--error .ds-textfield__input {
+  border-color: var(--lightning-red-500, #ea4542);
+  background-color: var(--lightning-red-25, #fef2f2);
+}
+
+.ds-textfield--error .ds-textfield__input:hover:not(:disabled):not(:focus) {
+  border-color: var(--lightning-red-600, #dc2626);
+}
+
+.ds-textfield--error .ds-textfield__input:focus {
+  border-color: var(--lightning-red-500, #ea4542);
+  box-shadow: 0 0 0 3px var(--lightning-red-100, #fee2e2);
+}
+
+/* ============================================
+   INPUT STATES - VALIDATED (SUCCESS) TYPE
+   ============================================ */
+
+.ds-textfield--validated .ds-textfield__input {
+  border-color: var(--lightning-green-500, #12a732);
+  background-color: var(--lightning-green-25, #f0fdf4);
+}
+
+.ds-textfield--validated .ds-textfield__input:hover:not(:disabled):not(:focus) {
+  border-color: var(--lightning-green-600, #0c8727);
+}
+
+.ds-textfield--validated .ds-textfield__input:focus {
+  border-color: var(--lightning-green-500, #12a732);
+  box-shadow: 0 0 0 3px var(--lightning-green-100, #dcfce7);
+}
+
+/* ============================================
+   INPUT STATES - WARNING TYPE
+   ============================================ */
+
+.ds-textfield--warning .ds-textfield__input {
+  border-color: var(--lightning-orange-500, #ee6f11);
+  background-color: var(--lightning-orange-25, #fffbeb);
+}
+
+.ds-textfield--warning .ds-textfield__input:hover:not(:disabled):not(:focus) {
+  border-color: var(--lightning-orange-600, #cf630e);
+}
+
+.ds-textfield--warning .ds-textfield__input:focus {
+  border-color: var(--lightning-orange-500, #ee6f11);
+  box-shadow: 0 0 0 3px var(--lightning-orange-100, #fef3c7);
+}
+
+/* ============================================
+   STATUS ICON
+   ============================================ */
+
+.ds-textfield__icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+
+/* Icon for long/textarea - position at top */
+.ds-textfield__input--long + .ds-textfield__icon,
+textarea + .ds-textfield__icon {
+  top: 12px;
+  transform: none;
+}
+
+.ds-textfield__icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon colors by type */
+.ds-textfield--error .ds-textfield__icon {
+  color: var(--lightning-red-500, #ea4542);
+}
+
+.ds-textfield--validated .ds-textfield__icon {
+  color: var(--lightning-green-500, #12a732);
+}
+
+.ds-textfield--warning .ds-textfield__icon {
+  color: var(--lightning-orange-500, #ee6f11);
+}
+
+/* ============================================
+   HELPER TEXT (Description / Error / Warning)
+   ============================================ */
+
+.ds-textfield__helper {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: var(--weight-regular, 400);
+  line-height: 1.4;
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-textfield--error .ds-textfield__helper {
+  color: var(--lightning-red-600, #dc2626);
+}
+
+.ds-textfield--warning .ds-textfield__helper {
+  color: var(--lightning-orange-600, #cf630e);
+}
+
+.ds-textfield--validated .ds-textfield__helper {
+  color: var(--lightning-green-600, #0c8727);
+}
+
+/* ============================================
+   CHARACTER COUNT
+   ============================================ */
+
+.ds-textfield__count {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-xs, 12px);
+  font-weight: var(--weight-regular, 400);
+  color: var(--lightning-bluegray-500, #a3b6c7);
+  text-align: right;
+}
+
+.ds-textfield__count--warning {
+  color: var(--lightning-orange-500, #ee6f11);
+}
+
+.ds-textfield__count--error {
+  color: var(--lightning-red-500, #ea4542);
+}
+
+/* ============================================
+   LEGACY SUPPORT (backwards compatibility)
+   ============================================ */
+
+.ds-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset-small);
+}
+
+.ds-field__label {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-input {
+  padding: var(--offset-small) var(--offset-medium);
+  border: 1px solid var(--lightning-bluegray-300, #c9d6e2);
+  border-radius: var(--radius-md);
+  background-color: var(--lightning-contrast-white, #ffffff);
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-m, 14px);
+  color: var(--lightning-bluegray-900, #1f272f);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ds-input:focus {
+  border-color: var(--lightning-blue-300, #92c7fe);
+  box-shadow: 0 0 0 3px var(--lightning-blue-50, #dbebfe);
+}
+
+.ds-input.is-error {
+  border-color: var(--lightning-red-500, #ea4542);
+}
+
+.ds-field__desc {
+  font-size: var(--font-size-text-s, 13px);
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-field__error {
+  font-size: var(--font-size-text-s, 13px);
+  color: var(--lightning-red-600, #dc2626);
+}

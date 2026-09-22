@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const RepeatAlt: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M10.0001 17H8.00098C4.68727 17 2.00098 14.3137 2.00098 11C2.00098 7.68629 4.68727 5 8.00098 5H16.0001C19.3138 5 22.0001 7.68629 22.0001 11C22.0001 14.3137 19.3138 17 16.0001 17H14.0001M17.0001 20L14.0001 17M14.0001 17L17.0001 14" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M8.00098 6C5.23955 6 3.00098 8.23858 3.00098 11C3.00098 13.7614 5.23955 16 8.00098 16H10.0001C10.5524 16 11.0001 16.4477 11.0001 17C11.0001 17.5523 10.5524 18 10.0001 18H8.00098C4.13498 18 1.00098 14.866 1.00098 11C1.00098 7.13401 4.13498 4 8.00098 4H16.0001C19.8661 4 23.0001 7.13401 23.0001 11C23.0001 14.7308 20.0815 17.7799 16.403 17.9886L17.7072 19.2929C18.0978 19.6834 18.0978 20.3166 17.7072 20.7071C17.3167 21.0976 16.6836 21.0976 16.293 20.7071L13.293 17.7071C12.9025 17.3166 12.9025 16.6834 13.293 16.2929L16.293 13.2929C16.6836 12.9024 17.3167 12.9024 17.7072 13.2929C18.0978 13.6834 18.0978 14.3166 17.7072 14.7071L16.4328 15.9815C18.9917 15.7622 21.0001 13.6157 21.0001 11C21.0001 8.23858 18.7616 6 16.0001 6H8.00098Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('repeat-alt', RepeatAlt);

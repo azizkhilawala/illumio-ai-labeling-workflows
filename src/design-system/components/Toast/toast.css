@@ -1,0 +1,233 @@
+/* Toast Component - Based on Lightning Design System with Sonner Integration */
+
+/* ============================================
+   SONNER TOASTER CONTAINER (Custom Rendering)
+   ============================================ */
+
+[data-sonner-toaster] {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+}
+
+/* Wrapper for custom toast content */
+.ds-toast-wrapper {
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* ============================================
+   STANDALONE TOAST COMPONENT
+   ============================================ */
+
+.ds-toast {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--offset-small, 8px);
+  width: 360px;
+  padding: var(--offset-large, 16px);
+  background-color: var(--lightning-contrast-white, #ffffff);
+  border: 1px solid var(--lightning-bluegray-100, #e9eff5);
+  border-radius: var(--radius-md, 8px);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.ds-toast:hover {
+  background-color: var(--lightning-bluegray-25, #f7fafd);
+}
+
+/* ============================================
+   TOAST ICON
+   ============================================ */
+
+.ds-toast__icon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-toast__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Loading spinner */
+.ds-toast__spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--lightning-blue-100, #dbebfe);
+  border-top-color: var(--lightning-blue-500, #3a88fc);
+  border-radius: 50%;
+  animation: ds-toast-spin 0.8s linear infinite;
+}
+
+@keyframes ds-toast-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Icon type modifiers - color set via Icon component prop */
+.ds-toast__icon--success {
+  color: var(--lightning-green-600, #0C8727);
+}
+
+.ds-toast__icon--error {
+  color: var(--lightning-red-600, #C93734);
+}
+
+.ds-toast__icon--warning {
+  color: var(--lightning-orange-500, #EE6F11);
+}
+
+.ds-toast__icon--info {
+  color: var(--lightning-blue-600, #2366ed);
+}
+
+/* ============================================
+   TOAST CONTENT
+   ============================================ */
+
+.ds-toast__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 4px;
+}
+
+.ds-toast__title {
+  margin: 0;
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--lightning-bluegray-800, #3b4857);
+}
+
+.ds-toast:hover .ds-toast__title {
+  color: var(--lightning-bluegray-900, #1f272f);
+}
+
+.ds-toast__description {
+  margin: 0;
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-toast:hover .ds-toast__description {
+  color: var(--lightning-bluegray-800, #3b4857);
+}
+
+/* ============================================
+   TOAST LINK / ACTION
+   ============================================ */
+
+.ds-toast__link,
+.ds-toast__action {
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  font-size: var(--font-size-text-s, 13px);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--lightning-blue-600, #2366ed);
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.ds-toast__link:hover,
+.ds-toast__action:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   TOAST CLOSE BUTTON
+   ============================================ */
+
+.ds-toast__close {
+  position: absolute;
+  top: 7px;
+  right: 9px;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lightning-bluegray-500, #8499AB);
+  transition: color 0.15s ease;
+}
+
+.ds-toast__close:hover {
+  color: var(--lightning-bluegray-600, #63788f);
+}
+
+.ds-toast__close svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* ============================================
+   LEGACY TOAST CONTAINER (for custom implementations)
+   ============================================ */
+
+.ds-toast-container {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.ds-toast-container > * {
+  pointer-events: auto;
+}
+
+/* Position variants */
+.ds-toast-container--top-right {
+  top: 24px;
+  right: 24px;
+}
+
+.ds-toast-container--top-left {
+  top: 24px;
+  left: 24px;
+}
+
+.ds-toast-container--top-center {
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ds-toast-container--bottom-right {
+  bottom: 24px;
+  right: 24px;
+}
+
+.ds-toast-container--bottom-left {
+  bottom: 24px;
+  left: 24px;
+}
+
+.ds-toast-container--bottom-center {
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}

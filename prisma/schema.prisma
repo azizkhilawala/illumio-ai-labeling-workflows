@@ -1,0 +1,207 @@
+// Prisma schema for AI Labeling feature
+// Learn more: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ---------------------------------------------------------------------------
+// Enums
+// ---------------------------------------------------------------------------
+
+enum LabelType {
+  App
+  Role
+  Env
+  Loc
+}
+
+enum RecommendationStatus {
+  PENDING
+  APPROVED
+  IGNORED
+}
+
+enum CloudProvider {
+  AWS
+  Azure
+  GCP
+}
+
+enum PlatformType {
+  CLOUD
+  DATA_CENTER
+}
+
+enum BatchStatus {
+  RUNNING
+  COMPLETED
+  FAILED
+}
+
+// ---------------------------------------------------------------------------
+// Models
+// ---------------------------------------------------------------------------
+
+/// Represents a cloud resource (EC2, S3, RDS, etc.)
+model Resource {
+  id            String         @id @default(cuid())
+  name          String
+  resourceType  String
+  cloudProvider CloudProvider?  // Make optional for DC resources
+  platformType  PlatformType   @default(CLOUD)
+  region        String?        // Make optional
+  accountId     String?        // Make optional for DC
+  hostname      String?        // For DC resources
+  category      String?        // e.g., "Networking", "Compute"
+  state         String?        // e.g., "Running", "Stopped"
+  metadata      Json?
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+
+  recommendations LabelRecommendation[]
+  appliedLabels   AppliedLabel[]
+  cloudTags       CloudTag[]
+  processes       Process[]
+
+  @@index([cloudProvider])
+  @@index([platformType])
+  @@index([resourceType])
+  @@index([region])
+}
+
+model CloudTag {
+  id         String   @id @default(cuid())
+  resourceId String
+  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  key        String
+  value      String
+
+  @@index([resourceId])
+  @@unique([resourceId, key])
+}
+
+model Process {
+  id         String   @id @default(cuid())
+  resourceId String
+  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  name       String
+  path       String?
+  port       Int?
+  protocol   String?
+  count      Int      @default(1) // Number of process instances
+
+  @@index([resourceId])
+  @@unique([resourceId, name, port])
+}
+
+/// Represents a label that can be applied to resources
+model Label {
+  id        String    @id @default(cuid())
+  type      LabelType
+  value     String
+  createdAt DateTime  @default(now())
+
+  recommendations LabelRecommendation[]
+  appliedLabels   AppliedLabel[]
+
+  @@unique([type, value])
+  @@index([type])
+}
+
+/// AI-generated label recommendation for a resource
+model LabelRecommendation {
+  id           String               @id @default(cuid())
+  resourceId   String
+  resource     Resource             @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  labelId      String
+  label        Label                @relation(fields: [labelId], references: [id], onDelete: Cascade)
+  confidence   Float                @default(0.85) // AI confidence score 0.0 - 1.0
+  evidence     String               // AI explanation for the recommendation
+  status       RecommendationStatus @default(PENDING)
+
+  // Audit fields
+  reviewedBy   String?
+  reviewedAt   DateTime?
+  ignoreReason String?
+
+  // Detailed evidence fields (from CSV)
+  appExplanationShort  String?
+  appExplanation       String?  @db.Text
+  roleExplanationShort String?
+  roleExplanation      String?  @db.Text
+  predictedEnv         String?
+  predictedLocation    String?
+
+  // Store the user name for display
+  reviewedByName       String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([resourceId, labelId])
+  @@index([status])
+  @@index([resourceId])
+  @@index([labelId])
+  @@index([createdAt])
+}
+
+/// Labels that have been applied to resources
+model AppliedLabel {
+  id         String   @id @default(cuid())
+  resourceId String
+  resource   Resource @relation(fields: [resourceId], references: [id], onDelete: Cascade)
+  labelId    String
+  label      Label    @relation(fields: [labelId], references: [id], onDelete: Cascade)
+  appliedBy  String
+  appliedAt  DateTime @default(now())
+  source     String   @default("AI_RECOMMENDATION") // AI_RECOMMENDATION, MANUAL
+
+  @@unique([resourceId, labelId])
+  @@index([appliedBy])
+  @@index([appliedAt])
+}
+
+/// Audit log for tracking all actions
+model AuditLog {
+  id         String   @id @default(cuid())
+  action     String   // APPROVE, IGNORE, RESTORE, EDIT
+  entityType String   // LabelRecommendation, AppliedLabel
+  entityId   String
+  userId     String
+  userName   String?
+  details    Json?    // Additional context about the action
+  createdAt  DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([userId])
+  @@index([createdAt])
+}
+
+/// User preferences for AI Labeling
+model UserPreference {
+  id                    String   @id @default(cuid())
+  userId                String   @unique
+  defaultGroupBy        String   @default("application")
+  showVideoBanner       Boolean  @default(true)
+  defaultSortBy         String   @default("resources-desc")
+  itemsPerPage          Int      @default(20)
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+}
+
+model RecommendationBatch {
+  id            String      @id @default(cuid())
+  status        BatchStatus @default(RUNNING)
+  startedAt     DateTime    @default(now())
+  completedAt   DateTime?
+  resourceCount Int         @default(0)
+
+  @@index([status])
+  @@index([completedAt])
+}

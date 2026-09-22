@@ -1,0 +1,268 @@
+/* Illustration Component */
+.ds-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.ds-illustration--sm {
+  width: 100px;
+  height: 100px;
+}
+
+.ds-illustration--md {
+  width: 150px;
+  height: 150px;
+}
+
+.ds-illustration--lg {
+  width: 200px;
+  height: 200px;
+}
+
+/* Base illustration container */
+.ds-illustration__empty-state,
+.ds-illustration__success,
+.ds-illustration__error,
+.ds-illustration__warning,
+.ds-illustration__search,
+.ds-illustration__no-data {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Background ellipse/gradient */
+.ds-illustration__ellipse {
+  position: absolute;
+  width: 66%;
+  height: 66%;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    var(--lightning-blue-50) 0%,
+    transparent 70%
+  );
+  opacity: 0.8;
+}
+
+.ds-illustration__ellipse--success {
+  background: radial-gradient(
+    ellipse at center,
+    var(--lightning-green-50) 0%,
+    transparent 70%
+  );
+}
+
+.ds-illustration__ellipse--error {
+  background: radial-gradient(
+    ellipse at center,
+    var(--lightning-red-50) 0%,
+    transparent 70%
+  );
+}
+
+.ds-illustration__ellipse--warning {
+  background: radial-gradient(
+    ellipse at center,
+    var(--lightning-orange-50) 0%,
+    transparent 70%
+  );
+}
+
+/* Dashed ring */
+.ds-illustration__ring {
+  position: relative;
+  width: 48%;
+  height: 48%;
+  border: 1.2px dashed var(--lightning-blue-200);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lightning-white);
+  z-index: 1;
+}
+
+.ds-illustration__ring--success {
+  border-color: var(--lightning-green-200);
+}
+
+.ds-illustration__ring--error {
+  border-color: var(--lightning-red-200);
+}
+
+.ds-illustration__ring--warning {
+  border-color: var(--lightning-orange-200);
+}
+
+/* Center icon */
+.ds-illustration__icon {
+  width: 50%;
+  height: 50%;
+  color: var(--lightning-blue-400);
+}
+
+.ds-illustration__ring--success .ds-illustration__icon {
+  color: var(--lightning-green-500);
+}
+
+.ds-illustration__ring--error .ds-illustration__icon {
+  color: var(--lightning-red-500);
+}
+
+.ds-illustration__ring--warning .ds-illustration__icon {
+  color: var(--lightning-orange-500);
+}
+
+/* Decorative stars */
+.ds-illustration__star {
+  position: absolute;
+  color: var(--lightning-blue-300);
+  z-index: 2;
+}
+
+.ds-illustration__star--1 {
+  width: 16%;
+  height: 16%;
+  top: 20%;
+  right: 8%;
+  opacity: 1;
+}
+
+.ds-illustration__star--2 {
+  width: 16%;
+  height: 16%;
+  bottom: 8%;
+  left: 10%;
+  opacity: 0.8;
+}
+
+.ds-illustration__star--3 {
+  width: 14%;
+  height: 14%;
+  top: 3%;
+  left: 17%;
+  opacity: 0.9;
+}
+
+.ds-illustration__star--4 {
+  width: 8%;
+  height: 8%;
+  top: 34%;
+  left: 0;
+  opacity: 0.7;
+}
+
+.ds-illustration__star--5 {
+  width: 8%;
+  height: 8%;
+  top: 58%;
+  left: 6%;
+  opacity: 0.6;
+}
+
+.ds-illustration__star--6 {
+  width: 8%;
+  height: 8%;
+  bottom: 4%;
+  right: 24%;
+  opacity: 0.4;
+}
+
+.ds-illustration__star--7 {
+  width: 5%;
+  height: 5%;
+  top: 47%;
+  right: 3%;
+  opacity: 0.4;
+}
+
+.ds-illustration__star--8 {
+  width: 5%;
+  height: 5%;
+  top: 9%;
+  left: 28%;
+  opacity: 0.4;
+}
+
+/* EmptyState Component */
+.ds-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--offset-medium);
+  width: 100%;
+  max-width: 348px;
+}
+
+.ds-empty-state--sm {
+  gap: var(--offset-small);
+  max-width: 280px;
+}
+
+.ds-empty-state--lg {
+  gap: var(--offset-large);
+  max-width: 420px;
+}
+
+.ds-empty-state__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--offset-xx-small);
+  text-align: center;
+}
+
+.ds-empty-state__title {
+  font-family: var(--family-font-family-default);
+  font-size: var(--font-size-text-s);
+  font-weight: var(--weight-medium);
+  color: var(--lightning-bluegray-900);
+  line-height: 1.4;
+}
+
+.ds-empty-state--sm .ds-empty-state__title {
+  font-size: var(--font-size-caption-s);
+}
+
+.ds-empty-state--lg .ds-empty-state__title {
+  font-size: var(--font-size-text-m);
+}
+
+.ds-empty-state__description {
+  font-family: var(--family-font-family-default);
+  font-size: var(--font-size-text-s);
+  font-weight: var(--weight-regular);
+  color: var(--lightning-bluegray-600);
+  line-height: 1.4;
+  max-width: 280px;
+}
+
+.ds-empty-state--sm .ds-empty-state__description {
+  font-size: var(--font-size-caption-s);
+  max-width: 220px;
+}
+
+.ds-empty-state--lg .ds-empty-state__description {
+  font-size: var(--font-size-text-s);
+  max-width: 360px;
+}
+
+.ds-empty-state__link {
+  font-family: var(--family-font-family-default);
+  font-size: var(--font-size-caption-s);
+  font-weight: var(--weight-regular);
+  color: var(--lightning-blue-600);
+  text-decoration: none;
+  margin-top: var(--offset-small);
+  cursor: pointer;
+}
+
+.ds-empty-state__link:hover {
+  text-decoration: underline;
+}

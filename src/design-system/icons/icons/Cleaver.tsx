@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const Cleaver: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M16.2106 12.8805L9 17L3 7L10 3L20.3806 19.5146C20.7306 20.0715 20.5951 20.8037 20.0689 21.1983C19.4884 21.6337 18.6614 21.492 18.2589 20.8883L16 17.5L16.5 16L15 13.5714M9 7L9.00707 7.00707" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M2.50386 6.13174L9.49946 2.13426C9.5952 2.07883 9.69661 2.04102 9.7998 2.01996C10.0965 1.9593 10.4061 2.03748 10.6383 2.22981C10.7193 2.29699 10.791 2.3781 10.8493 2.47209L21.2272 18.9824C21.8542 19.9799 21.6114 21.2915 20.6689 21.9983C19.6291 22.7781 18.1478 22.5244 17.4268 21.443L15.168 18.0547C14.9968 17.7979 14.9537 17.4765 15.0513 17.1838L15.3967 16.1477L14.668 15.0547C14.6449 15.0201 14.6242 14.9845 14.606 14.9483L9.49614 17.8682C9.02382 18.1381 8.42239 17.981 8.14251 17.5145L2.14251 7.51448C2.00416 7.2839 1.96451 7.00731 2.0325 6.74715C2.10049 6.48698 2.27039 6.26516 2.50386 6.13174ZM10 7C10 7.55228 9.55228 8 9 8C8.44772 8 8 7.55228 8 7C8 6.44772 8.44772 6 9 6C9.55228 6 10 6.44772 10 7ZM17.3589 16.5861L17.1035 17.3522L19.0911 20.3336C19.1751 20.4597 19.3478 20.4892 19.469 20.3983C19.5789 20.3159 19.6072 20.163 19.5341 20.0467L17.3589 16.5861Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('cleaver', Cleaver);

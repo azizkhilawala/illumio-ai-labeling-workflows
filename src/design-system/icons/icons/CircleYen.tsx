@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const CircleYen: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 18V12M12 12L9 7M12 12L15 7M9 13H15M9 16H15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM9.8574 5.98566C9.57325 5.51208 8.95899 5.35851 8.48541 5.64266C8.01183 5.92681 7.85827 6.54107 8.14241 7.01465L10.8337 11.5002H8.99991C8.44762 11.5002 7.99991 11.9479 7.99991 12.5002C7.99991 13.0524 8.44762 13.5002 8.99991 13.5002H10.9999V14.5002H8.99991C8.44762 14.5002 7.99991 14.9479 7.99991 15.5002C7.99991 16.0524 8.44762 16.5002 8.99991 16.5002H10.9999V17.5002C10.9999 18.0524 11.4476 18.5002 11.9999 18.5002C12.5522 18.5002 12.9999 18.0524 12.9999 17.5002V16.5002H14.9999C15.5522 16.5002 15.9999 16.0524 15.9999 15.5002C15.9999 14.9479 15.5522 14.5002 14.9999 14.5002H12.9999V13.5002H14.9999C15.5522 13.5002 15.9999 13.0524 15.9999 12.5002C15.9999 11.9479 15.5522 11.5002 14.9999 11.5002H13.1661L15.8574 7.01465C16.1415 6.54107 15.988 5.92681 15.5144 5.64266C15.0408 5.35851 14.4266 5.51208 14.1424 5.98566L11.9999 9.5565L9.8574 5.98566Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('circle-yen', CircleYen);

@@ -1,0 +1,32 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowRightToArc: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M11 21H12C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3H11M11 16L15 12M15 12L11 8M15 12H3" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path d="M3 11C2.44772 11 2 11.4477 2 12C2 12.5523 2.44772 13 3 13H12.5858L10.2929 15.2929C9.90237 15.6834 9.90237 16.3166 10.2929 16.7071C10.6834 17.0976 11.3166 17.0976 11.7071 16.7071L15.7071 12.7071C16.0976 12.3166 16.0976 11.6834 15.7071 11.2929L11.7071 7.29289C11.3166 6.90237 10.6834 6.90237 10.2929 7.29289C9.90237 7.68342 9.90237 8.31658 10.2929 8.70711L12.5858 11H3Z" fill={color}/>
+<path d="M10 21V18.8292C11.0553 19.2013 12.2772 18.9654 13.1213 18.1213L17.1213 14.1213C18.2929 12.9497 18.2929 11.0503 17.1213 9.87868L13.1213 5.87868C12.2772 5.0346 11.0553 4.79865 10 5.17083V3C10 2.44772 10.4477 2 11 2H12C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22H11C10.4477 22 10 21.5523 10 21Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrow-right-to-arc', ArrowRightToArc);

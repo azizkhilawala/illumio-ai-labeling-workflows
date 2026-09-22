@@ -1,0 +1,121 @@
+/* ===========================================
+   SEMANTIC TOKENS
+   Component and use-case specific tokens
+   References primitive tokens from primitives.css
+   =========================================== */
+
+:root {
+  /* ===========================================
+     Background
+     =========================================== */
+  --bg-page: var(--lightning-bluegray-25);
+  --bg-card: var(--lightning-contrast-white);
+  --bg-card-hover: var(--lightning-gray-100);
+  --bg-table-header: var(--lightning-contrast-white);
+  --bg-stat-card: var(--lightning-gray-100);
+  --bg-divider: var(--lightning-bluegray-200);
+  --bg-overlay: rgba(31, 39, 47, 0.5);
+  --bg-tooltip: rgba(31, 39, 47, 0.8);
+
+  /* ===========================================
+     Text
+     =========================================== */
+  --text-primary: var(--lightning-gray-900);
+  --text-secondary: var(--lightning-gray-600);
+  --text-muted: var(--lightning-gray-500);
+  --text-heading: var(--lightning-gray-900);
+  --text-on-dark: var(--lightning-contrast-white);
+  --text-link: var(--lightning-blue-600);
+  --text-link-light: var(--lightning-blue-300);
+
+  /* ===========================================
+     Border
+     =========================================== */
+  --border-card: var(--lightning-bluegray-200);
+  --border-divider: var(--lightning-bluegray-200);
+  --border-input: var(--lightning-bluegray-300);
+  --border-input-focus: var(--lightning-blue-400);
+
+  /* ===========================================
+     Status - Severity
+     =========================================== */
+  --color-critical: var(--lightning-magenta-400);
+  --color-critical-bg: var(--lightning-magenta-50);
+  --color-critical-border: var(--lightning-magenta-200);
+
+  --color-high: var(--lightning-red-400);
+  --color-high-bg: var(--lightning-red-50);
+  --color-high-border: var(--lightning-red-200);
+
+  --color-medium: var(--lightning-orange-400);
+  --color-medium-bg: var(--lightning-orange-50);
+  --color-medium-border: var(--lightning-orange-200);
+
+  --color-low: var(--lightning-yellow-400);
+  --color-low-bg: var(--lightning-yellow-50);
+  --color-low-border: var(--lightning-yellow-200);
+
+  /* ===========================================
+     Status - State
+     =========================================== */
+  --color-success: var(--lightning-green-400);
+  --color-success-bg: var(--lightning-green-50);
+
+  --color-warning: var(--lightning-yellow-400);
+  --color-warning-bg: var(--lightning-yellow-50);
+
+  --color-danger: var(--lightning-red-400);
+  --color-danger-bg: var(--lightning-red-50);
+
+  /* ===========================================
+     Accent
+     =========================================== */
+  --color-blue: var(--lightning-blue-600);
+  --color-blue-bg: var(--lightning-blue-50);
+
+  --color-indigo: var(--lightning-indigo-600);
+  --color-indigo-bg: var(--lightning-indigo-50);
+
+  /* ===========================================
+     Score Ring
+     =========================================== */
+  --score-good: var(--lightning-green-500);
+  --score-warning: var(--lightning-yellow-500);
+  --score-danger: var(--lightning-red-500);
+  --score-track: var(--lightning-gray-200);
+
+  /* ===========================================
+     Interactive
+     =========================================== */
+  --btn-default-bg: var(--lightning-gray-100);
+  --btn-default-hover: var(--lightning-gray-200);
+  --btn-primary-bg: var(--lightning-blue-600);
+  --btn-primary-hover: var(--lightning-blue-700);
+  --focus-ring: var(--lightning-blue-50);
+
+  /* ===========================================
+     Shadows
+     =========================================== */
+  --shadow-sm: 0px 1px 2px 0px rgba(31, 39, 47, 0.1);
+  --shadow-md: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0px 4px 16px rgba(133, 153, 172, 0.2);
+  --shadow-xl: 0px 4px 24px rgba(133, 153, 172, 0.25);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* ===========================================
+     SideNav Colors
+     =========================================== */
+  --sidenav-text: var(--lightning-bluegray-600);
+  --sidenav-text-hover: var(--lightning-blue-700);
+  --sidenav-text-expanded: var(--lightning-blue-900);
+  --sidenav-branch: var(--lightning-bluegray-300);
+  --sidenav-gradient: linear-gradient(172deg, var(--lightning-blue-700) 6%, var(--lightning-indigo-500) 53%, var(--lightning-blue-300) 94%);
+  --sidenav-item-hover-bg: rgba(111, 177, 252, 0.2);
+  --sidenav-badge-bg: var(--lightning-teal-500);
+
+  /* ===========================================
+     Legacy
+     =========================================== */
+  --background: var(--bg-page);
+  --foreground: var(--text-primary);
+}

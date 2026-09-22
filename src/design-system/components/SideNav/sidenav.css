@@ -1,0 +1,481 @@
+/* SideNav Component - Based on Figma Design */
+
+.ds-sidenav {
+  /* Local token overrides */
+  --sidenav-width: 220px;
+  --sidenav-collapsed-width: 64px;
+  --sidenav-bg: var(--lightning-contrast-white, #ffffff);
+  --sidenav-border-color: var(--lightning-gray-200, #e6e8eb);
+  --sidenav-padding: var(--offset-medium, 12px);
+
+  /* Item colors - using Lightning tokens */
+  --sidenav-item-color: var(--lightning-bluegray-600);
+  --sidenav-item-color-hover: var(--lightning-blue-700);
+  --sidenav-item-color-expanded: var(--lightning-blue-900);
+  --sidenav-item-bg-hover: rgba(111, 177, 252, 0.2);
+  --sidenav-item-gradient: linear-gradient(172deg, var(--lightning-blue-700) 6%, var(--lightning-indigo-500) 53%, var(--lightning-blue-300) 94%);
+  --sidenav-branch-color: var(--lightning-bluegray-400);
+  --sidenav-badge-bg: var(--lightning-teal-500);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  width: var(--sidenav-width);
+  height: 100vh;
+  background-color: var(--sidenav-bg);
+  border-right: 1px solid var(--sidenav-border-color);
+  font-family: var(--family-font-family-default, 'Geist', sans-serif);
+  overflow: hidden;
+  transition: width 0.2s ease;
+}
+
+.ds-sidenav--collapsed {
+  width: var(--sidenav-collapsed-width);
+}
+
+.ds-sidenav--collapsed .ds-sidenav__item-label,
+.ds-sidenav--collapsed .ds-sidenav__item-badge,
+.ds-sidenav--collapsed .ds-sidenav__item-chevron,
+.ds-sidenav--collapsed .ds-sidenav__section-title,
+.ds-sidenav--collapsed .ds-sidenav__section-chevron,
+.ds-sidenav--collapsed .ds-sidenav__sublist {
+  display: none;
+}
+
+.ds-sidenav--collapsed .ds-sidenav__item {
+  justify-content: center;
+  padding: var(--offset-medium, 12px);
+}
+
+.ds-sidenav--collapsed .ds-sidenav__toggle svg {
+  transform: rotate(180deg);
+}
+
+/* Header */
+.ds-sidenav__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--offset-large, 16px) var(--sidenav-padding);
+  border-bottom: 1px solid var(--sidenav-border-color);
+  flex-shrink: 0;
+}
+
+.ds-sidenav__logo {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.ds-sidenav__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm, 4px);
+  color: var(--lightning-gray-500, #9ba3ab);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.ds-sidenav__toggle:hover {
+  background-color: var(--lightning-gray-100, #edf0f2);
+  color: var(--lightning-gray-700, #575d65);
+}
+
+.ds-sidenav__toggle svg {
+  transition: transform 0.2s ease;
+}
+
+/* Content */
+.ds-sidenav__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--offset-small, 8px) 0;
+}
+
+/* Section */
+.ds-sidenav__section {
+  padding: var(--offset-x-small, 4px) var(--sidenav-padding);
+}
+
+.ds-sidenav__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--offset-small, 8px) var(--offset-small, 8px);
+  background: transparent;
+  border: none;
+  cursor: default;
+  text-align: left;
+}
+
+.ds-sidenav__section-header--collapsible {
+  cursor: pointer;
+  border-radius: var(--radius-sm, 4px);
+}
+
+.ds-sidenav__section-header--collapsible:hover {
+  background-color: var(--lightning-gray-50, #f6f8f9);
+}
+
+.ds-sidenav__section-title {
+  font-size: var(--font-size-caption-s, 11px);
+  font-weight: var(--weight-semibold, 600);
+  color: var(--lightning-gray-500, #9ba3ab);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ds-sidenav__section-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--lightning-gray-400, #b0b8bf);
+  transition: transform 0.2s ease;
+}
+
+.ds-sidenav__section-chevron--expanded {
+  transform: rotate(180deg);
+}
+
+.ds-sidenav__list {
+  list-style: none;
+  margin: 0;
+  padding: var(--offset-x-small, 4px) 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--offset-xx-small, 2px);
+}
+
+/* Nav Item Wrapper */
+.ds-sidenav__item-wrapper {
+  list-style: none;
+}
+
+/* Nav Item - Base */
+.ds-sidenav__item {
+  display: flex;
+  align-items: center;
+  gap: var(--offset-small);
+  width: 196px;
+  font-size: var(--font-size-text-s);
+  font-weight: var(--weight-medium);
+  color: var(--sidenav-item-color);
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  transition: background-color 0.15s, color 0.15s;
+}
+
+/* Level 1 - Default (1st level) */
+.ds-sidenav__item--level-1 {
+  padding: var(--offset-x-small) var(--offset-small);
+}
+
+/* Level 2 - 2nd level */
+.ds-sidenav__item--level-2 {
+  padding: var(--offset-x-small) var(--offset-small) var(--offset-x-small) var(--offset-x-large);
+}
+
+/* Level 3 - 3rd level (rare, usually use SideNavSubItem) */
+.ds-sidenav__item--level-3 {
+  padding: var(--offset-x-small) var(--offset-small) var(--offset-x-small) 28px;
+}
+
+/* Hover State */
+.ds-sidenav__item:hover {
+  background-color: var(--sidenav-item-bg-hover);
+  color: var(--sidenav-item-color-hover);
+}
+
+/* Expanded State (parent item when children visible) */
+.ds-sidenav__item--expanded {
+  color: var(--sidenav-item-color-expanded);
+  font-weight: 600;
+}
+
+.ds-sidenav__item--expanded:hover {
+  background-color: var(--sidenav-item-bg-hover);
+  color: var(--sidenav-item-color-hover);
+}
+
+/* Active/Selected State - Gradient background */
+.ds-sidenav__item--active {
+  background: var(--sidenav-item-gradient);
+  color: var(--lightning-contrast-white);
+}
+
+.ds-sidenav__item--active:hover {
+  background: var(--sidenav-item-gradient);
+  color: var(--lightning-contrast-white);
+  opacity: 0.95;
+}
+
+.ds-sidenav__item--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Item Icon */
+.ds-sidenav__item-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: inherit;
+}
+
+.ds-sidenav__item-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Item Label */
+.ds-sidenav__item-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Item Badge */
+.ds-sidenav__item-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--offset-xx-small) var(--offset-x-small);
+  font-size: var(--font-size-caption-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--lightning-contrast-white);
+  background-color: var(--sidenav-badge-bg);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+/* Item Chevron (for expandable items) */
+.ds-sidenav__item-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: inherit;
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+
+.ds-sidenav__item-chevron--expanded {
+  transform: rotate(180deg);
+}
+
+/* Sub-items list */
+.ds-sidenav__sublist {
+  list-style: none;
+  margin: 0;
+  padding: var(--offset-xx-small) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Sub-item wrapper */
+.ds-sidenav__subitem-wrapper {
+  list-style: none;
+  position: relative;
+}
+
+/* Continuous I-shape vertical line for 3rd level items */
+.ds-sidenav__subitem-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--sidenav-branch-color);
+  transition: background-color 0.15s;
+}
+
+/* Line color on hover */
+.ds-sidenav__subitem-wrapper:has(.ds-sidenav__subitem:hover)::before {
+  background-color: var(--sidenav-item-color-hover);
+}
+
+/* Line color on active */
+.ds-sidenav__subitem-wrapper:has(.ds-sidenav__subitem--active)::before {
+  background-color: var(--lightning-contrast-white);
+}
+
+/* Line color on expanded */
+.ds-sidenav__subitem-wrapper:has(.ds-sidenav__subitem--expanded)::before {
+  background-color: var(--sidenav-item-color-expanded);
+}
+
+/* Sub-item (3rd level) */
+.ds-sidenav__subitem {
+  display: flex;
+  align-items: center;
+  gap: var(--offset-small);
+  width: 100%;
+  padding-left: 37px; /* 28px (line position) + 1px (line) + 8px (gap) */
+  font-size: var(--font-size-text-s);
+  font-weight: var(--weight-medium);
+  color: var(--sidenav-item-color);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: left;
+  transition: color 0.15s;
+}
+
+/* Hide the inline branch element (line is now on wrapper::before) */
+.ds-sidenav__subitem-branch {
+  display: none;
+}
+
+/* Sub-item content wrapper */
+.ds-sidenav__subitem-content {
+  display: flex;
+  align-items: center;
+  gap: var(--offset-medium);
+  flex: 1;
+  padding: var(--offset-x-small) var(--offset-small);
+  border-radius: var(--radius-sm);
+  min-width: 0;
+  transition: background-color 0.15s;
+}
+
+.ds-sidenav__subitem:hover .ds-sidenav__subitem-content {
+  background-color: var(--sidenav-item-bg-hover);
+}
+
+.ds-sidenav__subitem:hover {
+  color: var(--sidenav-item-color-hover);
+}
+
+/* Sub-item label */
+.ds-sidenav__subitem-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Sub-item badge */
+.ds-sidenav__subitem-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--offset-xx-small) var(--offset-x-small);
+  font-size: var(--font-size-caption-xs);
+  font-weight: var(--weight-semibold);
+  color: var(--lightning-contrast-white);
+  background-color: var(--sidenav-badge-bg);
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+}
+
+/* Sub-item chevron (for expandable 3rd level items) */
+.ds-sidenav__subitem-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  color: inherit;
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+
+.ds-sidenav__subitem-chevron--expanded {
+  transform: rotate(180deg);
+}
+
+/* Sub-item expanded state (parent when children visible) */
+.ds-sidenav__subitem--expanded {
+  color: var(--sidenav-item-color-expanded);
+  font-weight: 600;
+}
+
+.ds-sidenav__subitem--expanded:hover {
+  color: var(--sidenav-item-color-hover);
+}
+
+/* Nested sublist (4th level and beyond) */
+.ds-sidenav__sublist--nested {
+  padding-left: 12px;
+}
+
+/* Sub-item Active/Selected State */
+.ds-sidenav__subitem--active .ds-sidenav__subitem-content {
+  background: var(--sidenav-item-gradient);
+}
+
+.ds-sidenav__subitem--active {
+  color: var(--lightning-contrast-white);
+  font-weight: 500;
+}
+
+.ds-sidenav__subitem--active .ds-sidenav__subitem-chevron {
+  opacity: 1;
+}
+
+.ds-sidenav__subitem--active:hover {
+  color: var(--lightning-contrast-white);
+}
+
+.ds-sidenav__subitem--active:hover .ds-sidenav__subitem-content {
+  background: var(--sidenav-item-gradient);
+  opacity: 0.95;
+}
+
+/* Divider */
+.ds-sidenav__divider {
+  height: 1px;
+  margin: var(--offset-small, 8px) var(--sidenav-padding);
+  background-color: var(--lightning-gray-200, #e6e8eb);
+}
+
+/* Footer */
+.ds-sidenav__footer {
+  margin-top: auto;
+  padding: var(--sidenav-padding);
+  border-top: 1px solid var(--sidenav-border-color);
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ds-sidenav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .ds-sidenav--open {
+    transform: translateX(0);
+  }
+}

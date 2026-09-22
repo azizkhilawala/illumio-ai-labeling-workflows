@@ -1,0 +1,63 @@
+import React from 'react';
+import type { IllustrationComponentProps } from '../types';
+import { registerIllustration } from '../registry';
+
+export const Table_neutral_emptystate: React.FC<IllustrationComponentProps> = ({
+  width,
+  height,
+  className = '',
+  ...props
+}) => {
+  // Calculate dimensions maintaining aspect ratio
+  const aspectRatio = 1.0638;
+  const defaultWidth = 150;
+  const defaultHeight = 141;
+
+  let finalWidth: number | string = width ?? defaultWidth;
+  let finalHeight: number | string = height ?? defaultHeight;
+
+  if (width && !height) {
+    finalHeight = Number(width) / aspectRatio;
+  } else if (height && !width) {
+    finalWidth = Number(height) * aspectRatio;
+  }
+
+  return (
+    <svg
+      width={finalWidth}
+      height={finalHeight}
+      viewBox="0 0 150 141"
+      fill="none"
+      className={`ds-illustration ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <circle cx="75.0111" cy="71.9984" r="49.64" stroke="#92C7FE" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="2.16 4.32"/>
+<path d="M41.2689 59.0712C38.1748 67.0469 37.9604 75.8523 40.6627 83.9691C43.365 92.086 48.8146 99.0056 56.0719 103.535C63.3293 108.065 71.9396 109.92 80.4183 108.782C88.8971 107.643 96.713 103.582 102.518 97.2985C108.324 91.015 111.755 82.9029 112.22 74.3607C112.686 65.8185 110.156 57.3816 105.068 50.5046C99.9795 43.6276 92.6511 38.7414 84.3462 36.6885C76.0413 34.6356 67.2804 35.5446 59.5739 39.2588" stroke="#92C7FE" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="2.4 4.8"/>
+<path d="M125.867 31.9285L130.466 36.5272M130.466 31.9285L125.867 36.5272" stroke="#92C7FE" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M12.8242 99.3212L16.9336 103.431M16.9336 99.3212L12.8242 103.431" stroke="#BEDCFF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+<circle cx="47.641" cy="42.2216" r="1.06677" fill="#BEDCFF"/>
+<circle cx="52.8873" cy="44.8883" r="1.6" fill="#92C7FE"/>
+<circle cx="46.5742" cy="51.0657" r="3.22086" fill="#BEDCFF"/>
+<path d="M111.043 114.48L118.201 121.638M118.201 114.48L111.043 121.638" stroke="#BEDCFF" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+<circle cx="131.078" cy="23.7285" r="2.91406" fill="#92C7FE"/>
+<circle cx="129.84" cy="76.3973" r="1.23816" fill="#92C7FE"/>
+<circle cx="16.0035" cy="53.9327" r="2.30698" fill="#92C7FE"/>
+<circle cx="18.3927" cy="88.8761" r="1.45911" fill="#BEDCFF"/>
+<circle cx="40.851" cy="23.201" r="1.9447" fill="#BEDCFF"/>
+<circle cx="116.773" cy="29.0728" r="1.5" fill="#92C7FE"/>
+<circle cx="114.622" cy="102.248" r="2.92676" fill="#92C7FE"/>
+<path d="M57.1953 80.4186L66.005 80.1182V85.8589H59.6544C59.6544 85.8589 60.2291 84.9357 59.6544 83.1114C59.0796 81.2872 57.1953 80.4186 57.1953 80.4186Z" fill="#DBEBFE"/>
+<path d="M95.332 80.0202C95.332 82.3875 95.332 83.5712 94.8713 84.4754C94.4661 85.2708 93.8194 85.9174 93.0241 86.3227C92.1199 86.7834 90.9362 86.7834 88.5689 86.7834H88.5688H86.0634H85.6677H85.5894H66.9111V79.3207H57.2891V71.7606V63.5349H65.4656H66.9111H85.6439H85.6677H86.0634H95.332V71.7606V79.3207V80.0202Z" fill="#DBEBFE"/>
+<path d="M60.0403 86.7834H66.9111M95.332 79.3207V80.0202C95.332 82.3875 95.332 83.5712 94.8713 84.4754C94.4661 85.2708 93.8194 85.9174 93.0241 86.3227C92.1199 86.7834 90.9362 86.7834 88.5688 86.7834H86.0634H85.6677M95.332 79.3207H57.2891V71.7606M95.332 79.3207V71.7606M95.332 71.7606H57.2891M95.332 71.7606V63.5349H86.0634H85.6677M57.2891 71.7606V63.5349H65.4656H66.9111M66.9111 63.5349V86.7834M66.9111 63.5349H85.6439H85.6677M66.9111 86.7834H85.5894H85.6677M85.6677 63.5349V86.7834" stroke="#6FB1FC" strokeWidth="1.88888" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M88.5688 56.6393H64.0523C61.6849 56.6393 60.5012 56.6393 59.597 56.9399C58.8017 57.2043 58.155 57.6263 57.7498 58.1453C57.2891 58.7353 57.2891 59.5076 57.2891 61.0523V63.5347H95.332V61.0523C95.332 59.5076 95.332 58.7353 94.8713 58.1453C94.466 57.6263 93.8194 57.2043 93.024 56.9399C92.1198 56.6393 90.9362 56.6393 88.5688 56.6393Z" fill="#6FB1FC" stroke="#6FB1FC" strokeWidth="1.88888" strokeLinecap="round" strokeLinejoin="round"/>
+<path d="M50.6332 88.9353C50.4 89.2248 50.4564 89.648 50.7497 89.8781L52.3929 91.1365C52.6862 91.3666 53.1148 91.3109 53.3479 91.0214L57.3712 85.8988C57.6043 85.6093 57.5479 85.1824 57.2546 84.956L57.029 84.789L55.7694 83.8164L55.6077 83.6976C55.3144 83.4675 54.882 83.5232 54.6527 83.8127L50.6332 88.9353Z" fill="#2366ED"/>
+<path d="M62.2768 66.6593C57.1969 67.2941 53.6023 71.8747 54.2415 76.8933C54.5197 79.0611 55.5425 80.9505 57.0239 82.3537C57.3849 82.6989 57.7722 83.0107 58.1858 83.2891C59.9906 84.5215 62.2542 85.1265 64.6043 84.8333C69.6841 84.1948 73.2825 79.6142 72.6358 74.5956C71.989 69.577 67.3566 66.0246 62.2768 66.6593ZM55.7568 76.704C55.2229 72.5095 58.2272 68.6898 62.4685 68.159C66.7099 67.6282 70.5828 70.5978 71.1205 74.7849C71.6544 78.9795 68.6501 82.7991 64.4125 83.3299C60.1674 83.8607 56.2945 80.8986 55.7568 76.704Z" fill="#3A88FC"/>
+<path d="M62.4701 68.1589C58.225 68.6898 55.2245 72.5094 55.7584 76.704C56.2961 80.8985 60.1727 83.8607 64.4141 83.3299C68.6555 82.7991 71.656 78.9794 71.1221 74.7849C70.5844 70.5977 66.7115 67.6281 62.4701 68.1589Z" fill="#EFF6FF"/>
+<path d="M55.8262 83.8423L57.0031 84.7518L57.0068 84.7481L58.1875 83.2855C57.7739 83.0108 57.3866 82.6953 57.0256 82.3501L55.8262 83.8423Z" fill="#2366ED"/>
+    </svg>
+  );
+};
+
+// Register this illustration
+registerIllustration('table_neutral_emptystate', Table_neutral_emptystate);

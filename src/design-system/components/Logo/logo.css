@@ -1,0 +1,60 @@
+/* Logo Component */
+.ds-logo {
+  --logo-color: var(--lightning-orange-500, #FF5500);
+  --logo-text-color: var(--lightning-bluegray-900, #313638);
+
+  display: inline-flex;
+  align-items: center;
+  gap: var(--offset-small, 8px);
+}
+
+/* Icon */
+.ds-logo__icon {
+  flex-shrink: 0;
+}
+
+/* Wordmark */
+.ds-logo__wordmark {
+  flex-shrink: 0;
+}
+
+/* Size Variants */
+.ds-logo--sm .ds-logo__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.ds-logo--sm .ds-logo__wordmark {
+  height: 12px;
+  width: auto;
+}
+
+.ds-logo--md .ds-logo__icon {
+  width: 28px;
+  height: 28px;
+}
+
+.ds-logo--md .ds-logo__wordmark {
+  height: 16px;
+  width: auto;
+}
+
+.ds-logo--lg .ds-logo__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.ds-logo--lg .ds-logo__wordmark {
+  height: 22px;
+  width: auto;
+}
+
+/* Variant: Icon Only */
+.ds-logo--icon {
+  gap: 0;
+}
+
+/* Variant: Full (logo + text) */
+.ds-logo--full {
+  gap: var(--offset-small, 8px);
+}

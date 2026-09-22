@@ -1,0 +1,365 @@
+Resource Name,Resource Type,CSP,Account ID,Region,Label Type,Label Value,Evidence,Status
+lveulnx7093p,CLOUD,GCP,lv-gcp-dcx-prd-zpa-eu,europe-west1,App,zscaler,Label zscaler was predicted due to the presence of lv_application with value zscaler.,PENDING
+lveulnx7093p,CLOUD,GCP,lv-gcp-dcx-prd-zpa-eu,europe-west1,Role,Security Service,Label Security Service was predicted due to the presence of lv_application with value zscaler indicating a security function.,PENDING
+lveulnx7093p,CLOUD,GCP,lv-gcp-dcx-prd-zpa-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lveulnx7093p,CLOUD,GCP,lv-gcp-dcx-prd-zpa-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lvwwnva7133p,CLOUD,GCP,lv-gcp-prd-shared-hub-ww,europe-west1,App,firewall-nva,Label firewall-nva was predicted due to the presence of lv_application with value firewall-nva.,PENDING
+lv-kub-prd-digital-eu,CLOUD,GCP,lv-gcp-hyb-prd-digital-gke-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7081p,CLOUD,GCP,lv-gcp-dcx-prd-client360-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-kub-prd-retail-eu,CLOUD,GCP,lv-gcp-dcx-prd-retail-gke-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-product-lib-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-product-lib-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-product-lib-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-product-lib-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-leave-mgnt-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-leave-mgnt-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+wrvra99a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wxvwa02a0003,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+wcvww93a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+lveuwin7089p,CLOUD,GCP,lv-gcp-dcx-prd-cyberark-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+cpvrw00a0126,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+lveuwin7089p,CLOUD,GCP,lv-gcp-dcx-prd-cyberark-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7056d,CLOUD,GCP,lv-gcp-dcx-prd-sharedtls-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+acvra00a0410,DATA_CENTER,-,-,-,Role,Job Scheduler,Label Job Scheduler was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_dev/cybAgent.bin'.,PENDING
+acvra00a0410,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+advra00a0410,DATA_CENTER,-,-,-,Role,Backup Server,Label Backup Server was predicted due to the presence of process with value '/usr/openv/netbackup/bin/vnetd-port 13724-TCP'.,PENDING
+lvwwnva7133p,CLOUD,GCP,lv-gcp-prd-shared-hub-ww,europe-west1,Role,Firewall,Label Firewall was predicted due to the presence of resource name with value lvwwnva7133p.,PENDING
+lvwwnva7133p,CLOUD,GCP,lv-gcp-prd-shared-hub-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lvwwnva7133p,CLOUD,GCP,lv-gcp-prd-shared-hub-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7113p,CLOUD,GCP,lv-gcp-dcx-prd-zabbix-eu,europe-west1,App,zabbix,Label zabbix was predicted due to the presence of label/lv_application with value zabbix.,PENDING
+lveulnx7113p,CLOUD,GCP,lv-gcp-dcx-prd-zabbix-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-dev-jdc-postgresql,CLOUD,GCP,lv-gcp-dcx-npd-jdc-euw1,europe-west1,Env,Development,Environment predicted as Development.,PENDING
+lv-sql-prd-leave-mgnt-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-leave-mgnt-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+CDPWA91A1000,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+wdvww92a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-004c-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+apvww00a0429,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process name with value 'D:\\apps\\Tridion\\Services\\1CTM_48502_DEP_STG\\bin\\procrun.exe-TridionDeployerService-1CTMStaging'.,PENDING
+lveulnx7111p,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7113p,CLOUD,GCP,lv-gcp-dcx-prd-zabbix-eu,europe-west1,Role,Monitoring Server,Label Monitoring Server was predicted due to the presence of label/lv_description with value zabbix.,PENDING
+lveulnx7113p,CLOUD,GCP,lv-gcp-dcx-prd-zabbix-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-dev-dp-ds-dataiku,CLOUD,GCP,lv-gcp-dcx-dev-dp-ds-ww,europe-west4,App,dataplatform,Label dataplatform was predicted due to the presence of label with value dataplatform.,PENDING
+lv-kub-dev-dp-ds-dataiku,CLOUD,GCP,lv-gcp-dcx-dev-dp-ds-ww,europe-west4,Role,Data Platform Node,Label Data Platform Node was predicted due to the presence of Resource Name with value lv-kub-dev-dp-ds-dataiku.,PENDING
+lv-kub-dev-dp-ds-dataiku,CLOUD,GCP,lv-gcp-dcx-dev-dp-ds-ww,europe-west4,Env,Development,Environment predicted as Development.,PENDING
+lv-kub-dev-dp-ds-dataiku,CLOUD,GCP,lv-gcp-dcx-dev-dp-ds-ww,europe-west4,Loc,europe-west4,Location predicted as europe-west4.,PENDING
+CUPWA91A1000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-lvapp-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lvapp-ww,europe-west1,App,lvapp,Label lvapp was predicted due to the presence of lv_application with value lvapp.,PENDING
+lv-sql-prd-lvapp-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lvapp-ww,europe-west1,Role,PostgreSQL Database,Label PostgreSQL Database was predicted due to the presence of Resource Name with value lv-sql-prd-lvapp-postgresql.,PENDING
+lv-sql-prd-lvapp-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lvapp-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-lvapp-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lvapp-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7056d,CLOUD,GCP,lv-gcp-dcx-prd-sharedtls-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-digital-eu,CLOUD,GCP,lv-gcp-hyb-prd-digital-gke-eu,europe-west1,App,digital-gke,Label digital-gke was predicted due to the presence of label/lv_application with value digital-gke.,PENDING
+lv-kub-prd-digital-eu,CLOUD,GCP,lv-gcp-hyb-prd-digital-gke-eu,europe-west1,Role,Kubernetes Node,Label Kubernetes Node was predicted due to the presence of Resource Name with value lv-kub-prd-digital-eu.,PENDING
+lv-kub-prd-digital-eu,CLOUD,GCP,lv-gcp-hyb-prd-digital-gke-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lvwwwdc7001p,CLOUD,GCP,lv-gcp-dcx-prd-sharedsvc-eu,europe-west1,App,shared,Label shared was predicted due to the presence of lv_application with value shared.,PENDING
+lvwwwdc7001p,CLOUD,GCP,lv-gcp-dcx-prd-sharedsvc-eu,europe-west1,Role,Web Server,Label Web Server was predicted due to the presence of Resource Name with value lvwwwdc7001p.,PENDING
+lvwwwdc7001p,CLOUD,GCP,lv-gcp-dcx-prd-sharedsvc-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lvwwwdc7001p,CLOUD,GCP,lv-gcp-dcx-prd-sharedsvc-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-customer-eu,CLOUD,GCP,lv-gcp-hyb-prd-customer-gke-eu,europe-west1,App,customer-solution,Label customer-solution was predicted due to the presence of label with value lv_application=customer-solution.,PENDING
+lv-kub-prd-customer-eu,CLOUD,GCP,lv-gcp-hyb-prd-customer-gke-eu,europe-west1,Role,Kubernetes Node,Label Kubernetes Node was predicted due to the presence of resource name with value lv-kub-prd-customer-eu.,PENDING
+lv-kub-prd-customer-eu,CLOUD,GCP,lv-gcp-hyb-prd-customer-gke-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-kub-prd-customer-eu,CLOUD,GCP,lv-gcp-hyb-prd-customer-gke-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-tooling-eu,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,App,tooling,Label tooling was predicted due to the presence of lv_application with value tooling.,PENDING
+lv-kub-prd-tooling-eu,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Role,Kubernetes Cluster,Label Kubernetes Cluster was predicted due to the presence of Resource Name with value lv-kub-prd-tooling-eu.,PENDING
+lv-kub-prd-tooling-eu,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-kub-prd-tooling-eu,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveuwin7089p,CLOUD,GCP,lv-gcp-dcx-prd-cyberark-eu,europe-west1,App,cyberark,Label cyberark was predicted due to the presence of label with value 'lv_application=cyberark'.,PENDING
+lveuwin7089p,CLOUD,GCP,lv-gcp-dcx-prd-cyberark-eu,europe-west1,Role,Windows Server,Label Windows Server was predicted due to the presence of Resource Name with value 'lveuwin7089p'.,PENDING
+lveulnx7111p,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,App,neoload,Label neoload was predicted due to the presence of label with value neoload.,PENDING
+lveulnx7111p,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Role,Testing Server,Label Testing Server was predicted due to inference from application type associated with performance testing.,PENDING
+lveulnx7111p,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lveulnx7081p,CLOUD,GCP,lv-gcp-dcx-prd-client360-ww,europe-west1,App,c360,Label c360 was predicted due to the presence of label lv_application with value c360.,PENDING
+lveulnx7081p,CLOUD,GCP,lv-gcp-dcx-prd-client360-ww,europe-west1,Role,Client Management Service,Label Client Management Service was predicted due to the presence of Account Name with value lv-gcp-dcx-prd-client360-ww.,PENDING
+lveulnx7081p,CLOUD,GCP,lv-gcp-dcx-prd-client360-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-integration-eu,CLOUD,GCP,lv-gcp-dcx-prd-integ-gke-eu,europe-west1,App,integration-gke,Label integration-gke was predicted due to the presence of tag with value integration_gke.,PENDING
+lv-kub-prd-integration-eu,CLOUD,GCP,lv-gcp-dcx-prd-integ-gke-eu,europe-west1,Role,Web Server,"Label Web Server was predicted due to the absence of a specific role label, inferring typical roles.",PENDING
+lv-kub-prd-integration-eu,CLOUD,GCP,lv-gcp-dcx-prd-integ-gke-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-kub-prd-integration-eu,CLOUD,GCP,lv-gcp-dcx-prd-integ-gke-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-shared-eu-1,CLOUD,GCP,lv-gcp-dcx-prd-shared-gke-eu,europe-west1,App,shared-gke,Label shared-gke was predicted due to the presence of lv_application with value shared-gke.,PENDING
+lv-kub-prd-shared-eu-1,CLOUD,GCP,lv-gcp-dcx-prd-shared-gke-eu,europe-west1,Role,Kubernetes Cluster,Label Kubernetes Cluster was predicted due to the presence of Resource Name with value lv-kub-prd-shared-eu-1.,PENDING
+lv-kub-prd-shared-eu-1,CLOUD,GCP,lv-gcp-dcx-prd-shared-gke-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-kub-prd-shared-eu-1,CLOUD,GCP,lv-gcp-dcx-prd-shared-gke-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7056d,CLOUD,GCP,lv-gcp-dcx-prd-sharedtls-eu,europe-west1,App,opscenter,Label opscenter was predicted due to the presence of label with value 'opscenter'.,PENDING
+lveulnx7056d,CLOUD,GCP,lv-gcp-dcx-prd-sharedtls-eu,europe-west1,Role,Monitoring,Label Monitoring was predicted due to the presence of lv_application tag hinting tools or ops management with value 'shared_tools'.,PENDING
+lv-kub-prd-retail-eu,CLOUD,GCP,lv-gcp-dcx-prd-retail-gke-eu,europe-west1,App,retail,Label retail was predicted due to the presence of lv_application tag with value retail.,PENDING
+lv-ilb-poc-test-udp,CLOUD,GCP,lv-gcp-out-sbx-mbh,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-kub-prd-retail-eu,CLOUD,GCP,lv-gcp-dcx-prd-retail-gke-eu,europe-west1,Role,Kubernetes Cluster,Label Kubernetes Cluster was predicted due to the presence of Resource Name with value lv-kub-prd-retail-eu.,PENDING
+lv-kub-prd-retail-eu,CLOUD,GCP,lv-gcp-dcx-prd-retail-gke-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveuwin7137p,CLOUD,GCP,lv-gcp-dcx-prd-rpa-ww,europe-west1,App,rpa,Label rpa was predicted due to the presence of lv_application with value rpa.,PENDING
+lveuwin7137p,CLOUD,GCP,lv-gcp-dcx-prd-rpa-ww,europe-west1,Role,Windows Server,Label Windows Server was predicted due to the presence of Resource Name with value lveuwin7137p.,PENDING
+lveuwin7137p,CLOUD,GCP,lv-gcp-dcx-prd-rpa-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lveuwin7137p,CLOUD,GCP,lv-gcp-dcx-prd-rpa-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-dev-mtc-mysql-1,CLOUD,GCP,lv-gcp-dcx-npd-mtc-ww,europe-west1,App,marketing_target,Label marketing_target was predicted due to the presence of label/lv_application with value marketing_target.,PENDING
+lv-sql-dev-mtc-mysql-1,CLOUD,GCP,lv-gcp-dcx-npd-mtc-ww,europe-west1,Role,MySQL Database,Label MySQL Database was predicted due to the presence of Resource Name with value 'lv-sql-dev-mtc-mysql-1'.,PENDING
+lv-sql-dev-mtc-mysql-1,CLOUD,GCP,lv-gcp-dcx-npd-mtc-ww,europe-west1,Env,Development,Environment predicted as Development.,PENDING
+lv-sql-dev-mtc-mysql-1,CLOUD,GCP,lv-gcp-dcx-npd-mtc-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lveulnx7139p,CLOUD,GCP,lv-gcp-dcx-prd-infolog-ww,europe-west1,App,precisely,Label precisely was predicted due to the presence of lv_application with value precisely.,PENDING
+lveulnx7139p,CLOUD,GCP,lv-gcp-dcx-prd-infolog-ww,europe-west1,Role,Application Server,Label Application Server was predicted due to the lack of specific role indication but inference based on application use.,PENDING
+lveulnx7139p,CLOUD,GCP,lv-gcp-dcx-prd-infolog-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lveulnx7139p,CLOUD,GCP,lv-gcp-dcx-prd-infolog-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-product-lib-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-product-lib-ww,europe-west1,App,product-library,Label product-library was predicted due to the presence of lv_application with value product-library.,PENDING
+lv-sql-prd-product-lib-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-product-lib-ww,europe-west1,Role,Database Server,Label Database Server was predicted due to the presence of Resource Name with value lv-sql-prd-product-lib-postgresql.,PENDING
+lv-sql-prd-lv-events-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lv-events-ww,europe-west1,App,lv-events,Label lv-events was predicted due to the presence of lv_application with value lv-events.,PENDING
+lv-sql-prd-lv-events-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lv-events-ww,europe-west1,Role,PostgreSQL Database,Label PostgreSQL Database was predicted due to the presence of Resource Name with value lv-sql-prd-lv-events-postgresql.,PENDING
+lv-sql-prd-lv-events-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lv-events-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-lv-events-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-lv-events-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-grafana-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,App,grafana,Label grafana was predicted due to the presence of label/lvmh_application with value grafana.,PENDING
+lv-sql-prd-grafana-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Role,Database,Label Database was predicted due to the presence of Resource Name with value lv-sql-prd-grafana-postgresql.,PENDING
+lv-sql-prd-grafana-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-grafana-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-tooling-eu,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-top-tool-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-top-tool,europe-west1,App,top-tool,Label top-tool was predicted due to the presence of label/lv_application with value top-tool.,PENDING
+lv-sql-prd-top-tool-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-top-tool,europe-west1,Role,Database Server,Label Database Server was predicted due to the presence of Resource Name containing 'sql' and 'postgresql'.,PENDING
+lv-sql-prd-top-tool-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-top-tool,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-top-tool-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-top-tool,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-horizon-analytics-postgresql,CLOUD,GCP,lv-gcp-hyb-prd-tambour-serv-ww,europe-west1,App,tambour-services,Label tambour-services was predicted due to the presence of label/lv_application with value tambour-services.,PENDING
+lv-sql-prd-horizon-analytics-postgresql,CLOUD,GCP,lv-gcp-hyb-prd-tambour-serv-ww,europe-west1,Role,Database,Label Database was predicted due to the presence of Resource Name with value lv-sql-prd-horizon-analytics-postgresql.,PENDING
+lv-sql-prd-horizon-analytics-postgresql,CLOUD,GCP,lv-gcp-hyb-prd-tambour-serv-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-horizon-analytics-postgresql,CLOUD,GCP,lv-gcp-hyb-prd-tambour-serv-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-ilb-poc-test-udp,CLOUD,GCP,lv-gcp-out-sbx-mbh,europe-west1,App,test,Label test was predicted due to the presence of label/lv_application with value test.,PENDING
+lv-ilb-poc-test-udp,CLOUD,GCP,lv-gcp-out-sbx-mbh,europe-west1,Role,Load Balancer,Label Load Balancer was predicted due to the presence of Resource Name containing 'lv-ilb'.,PENDING
+lv-ilb-poc-test-udp,CLOUD,GCP,lv-gcp-out-sbx-mbh,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-dev-jdc-postgresql,CLOUD,GCP,lv-gcp-dcx-npd-jdc-euw1,europe-west1,App,just-design-cost,Label just-design-cost was predicted due to the presence of label with value 'just-design-cost'.,PENDING
+lv-sql-dev-jdc-postgresql,CLOUD,GCP,lv-gcp-dcx-npd-jdc-euw1,europe-west1,Role,Database - PostgreSQL,Label Database - PostgreSQL was predicted due to the presence of Resource Name with value 'lv-sql-dev-jdc-postgresql'.,PENDING
+lv-sql-dev-jdc-postgresql,CLOUD,GCP,lv-gcp-dcx-npd-jdc-euw1,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-control-tower-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-ctl-tower-ww,europe-west1,App,control-tower,Label control-tower was predicted due to the presence of label/lv_application with value control-tower.,PENDING
+lv-sql-prd-control-tower-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-ctl-tower-ww,europe-west1,Role,Database Server - PostgreSQL,Label Database Server - PostgreSQL was predicted due to the presence of Resource Name with value lv-sql-prd-control-tower-postgresql.,PENDING
+lv-sql-prd-control-tower-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-ctl-tower-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-control-tower-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-ctl-tower-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-myreport-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-myreport-ww,europe-west1,App,my-report,Label my-report was predicted due to the presence of lv_application with value my-report.,PENDING
+lv-sql-prd-myreport-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-myreport-ww,europe-west1,Role,PostgreSQL Database,Label PostgreSQL Database was predicted due to the presence of resource name with value 'lv-sql-prd-myreport-postgresql'.,PENDING
+lv-sql-prd-myreport-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-myreport-ww,europe-west1,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-myreport-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-myreport-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-dev-creativai-images-paths,CLOUD,GCP,lv-gcp-dcx-dev-creativai-ww,europe-west1,App,creativai,Label creativai was predicted due to the presence of lv_application with value creativai.,PENDING
+lv-sql-dev-creativai-images-paths,CLOUD,GCP,lv-gcp-dcx-dev-creativai-ww,europe-west1,Role,SQL Server,Label SQL Server was predicted due to the presence of Resource Name with value lv-sql-dev-creativai-images-paths.,PENDING
+lv-sql-dev-creativai-images-paths,CLOUD,GCP,lv-gcp-dcx-dev-creativai-ww,europe-west1,Env,Development,Environment predicted as Development.,PENDING
+lv-sql-dev-creativai-images-paths,CLOUD,GCP,lv-gcp-dcx-dev-creativai-ww,europe-west1,Loc,europe-west1,Location predicted as europe-west1.,PENDING
+lv-sql-prd-leave-mgnt-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-leave-mgnt-eu,europe-west1,App,leave-management,Label leave-management was predicted due to the presence of lv_application with value leave-management.,PENDING
+auvra00a0305,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+lv-sql-prd-leave-mgnt-postgresql,CLOUD,GCP,lv-gcp-dcx-prd-leave-mgnt-eu,europe-west1,Role,PostgreSQL Database,Label PostgreSQL Database was predicted due to the presence of Resource Name with value 'lv-sql-prd-leave-mgnt-postgresql'.,PENDING
+CDPWA91A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'SCD.EXE-SimCorpDimensionServiceMUCS2DEV01'.,PENDING
+CDPWA91A1000,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process name with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA90A3000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA90A3000,DATA_CENTER,-,-,-,Role,File Transfer Service,Label File Transfer Service was predicted due to the presence of process name with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA90A3000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CSPWA90A2000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value SCD.EXE.,PENDING
+CSPWA90A2000,DATA_CENTER,-,-,-,Role,Data Transfer Service,Label Data Transfer Service was predicted due to the presence of process with value CDNT.exe.,PENDING
+CSPWA90A2000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CSPWA91A3000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'SCD.EXE'.,PENDING
+CSPWA91A3000,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value 'Connect Direct'.,PENDING
+CSPWA91A3000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CSPWA90A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'SCD.EXE'.,PENDING
+CSPWA90A1000,DATA_CENTER,-,-,-,Role,File Transfer,Label File Transfer was predicted due to the presence of process with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA90A1000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CSPWA91A2000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of processes with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA91A2000,DATA_CENTER,-,-,-,Role,Data transfer service,Label Data transfer service was predicted due to the presence of processes with value 'Connect Direct v6.3.0'.,PENDING
+CSPWA91A2000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CXPWA91A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'CA Workload Automation Agent (autosys_dev)'.,PENDING
+CXPWA91A1000,DATA_CENTER,-,-,-,Role,SMTP Server,Label SMTP Server was predicted due to the presence of process with value 'inetsrv\inetinfo.exe-SMTPSVC'.,PENDING
+CXPWA91A1000,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+CUPWA91A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'D:\\AutoSys 11.3\\SystemAgent\\autosys_dev\\cybAgent.exe'.,PENDING
+CUPWA91A1000,DATA_CENTER,-,-,-,Role,application server,Label application server was predicted due to the presence of application server-related processes with value 'C:\\Windows\\System32\\inetsrv\\inetinfo.exe'.,PENDING
+CRPWA90A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value D:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe.,PENDING
+CRPWA90A1000,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value D:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe.,PENDING
+CRPWA90A1000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+CPPWA91A1000,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'CDNT.exe'.,PENDING
+CPPWA91A1000,DATA_CENTER,-,-,-,Role,Data Transfer Service,Label Data Transfer Service was predicted due to the presence of process name with value 'CDNT.exe'.,PENDING
+CPPWA91A1000,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvra98a0832,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of process with value '/apps/mwauto/java/jdk-17.0.17/bin/java'.,PENDING
+wrvra98a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvra97a0832,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of port process with value '/apps/mwauto/java/jdk-17.0.17/bin/java-port 20002-TCP'.,PENDING
+wrvra97a0832,DATA_CENTER,-,-,-,Role,Network Monitoring,Label Network Monitoring was predicted due to the presence of port process with value '/opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64-port 22011-TCP'.,PENDING
+wrvra97a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvww98a0423,DATA_CENTER,-,-,-,Role,Messaging Server,Messaging Server role was predicted due to the presence of process with value 'C:\\Windows\\System32\\mqsvc.exe'.,PENDING
+wrvra99a0832,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of processes with value '/opt/boksm/lib/boks_bridge-port 6503-TCP'.,PENDING
+az2-002a-ixt-of,DATA_CENTER,-,-,-,Role,Backup Server,Label Backup Server was predicted due to the presence of process name with value '/usr/openv/netbackup/bin/vnetd'.,PENDING
+wrvra99a0832,DATA_CENTER,-,-,-,Role,Security Management,Label Security Management was predicted due to the presence of processes with value '/opt/boksm/lib/boks_bridge-port 6503-TCP'.,PENDING
+wxvwa02a0003,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'D:\\AutoSys 11.3\\SystemAgent\\autosys_dev\\cybAgent.exe-CA Workload Automation Agent (autosys_dev)'.,PENDING
+wxvwa02a0003,DATA_CENTER,-,-,-,Role,Agent,Label Agent was predicted due to the presence of process with value 'C:\\ProgramData\\Qualys\\SandboxRO\\agentid-service.exe'.,PENDING
+wpvwa99a1023,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'CDNT.exe'.,PENDING
+wpvwa99a1023,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value 'CDNT.exe'.,PENDING
+wpvwa99a1023,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvwa98a1023,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'C:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe-Connect Direct v6.3.0-port 1364-TCP'.,PENDING
+wpvwa98a1023,DATA_CENTER,-,-,-,Role,Data Transfer,Label Data Transfer was predicted due to the presence of process with value 'C:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe-Connect Direct v6.3.0-port 1364-TCP'.,PENDING
+wpvwa98a1023,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+az2-002a-ixt-of,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+az2-002a-ixt-of,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvww99a0423,DATA_CENTER,-,-,-,Role,Message Queue Server,Label Message Queue Server was predicted due to the presence of process name with value 'MSMQ'.,PENDING
+wcvww93a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'D:\\AutoSys 11.3\\SystemAgent\\autosys_dev\\cybAgent.exe-CA Workload Automation Agent (autosys_dev)-port 9490-TCP'.,PENDING
+wcvww93a0423,DATA_CENTER,-,-,-,Role,Message Queue Server,Label Message Queue Server was predicted due to the presence of process with value 'C:\\Windows\\System32\\mqsvc.exe-MSMQ'.,PENDING
+wdvww92a0423,DATA_CENTER,-,-,-,App,CCM,Label CCM was predicted due to the presence of hostname with value 'wdvww92a0423'.,PENDING
+wdvww92a0423,DATA_CENTER,-,-,-,Role,Message Queue Server,Label Message Queue Server was predicted due to the presence of MSMQ services like 'mqsvc.exe'.,PENDING
+wtvww94a0423,DATA_CENTER,-,-,-,App,ICMP,Label ICMP was predicted due to the presence of MSMQ process with value 'mqsvc.exe'.,PENDING
+wtvww94a0423,DATA_CENTER,-,-,-,Role,Messaging Server,Label Messaging Server was predicted due to the presence of MSMQ service with value 'mqsvc.exe'.,PENDING
+wtvww94a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wuvww95a0423,DATA_CENTER,-,-,-,App,CCM,Label CCM was predicted due to the presence of process with value 'C:\Windows\System32\mqsvc.exe'.,PENDING
+wuvww95a0423,DATA_CENTER,-,-,-,Role,Message Queue Server,Label Message Queue Server was predicted due to the presence of process with value 'C:\Windows\System32\mqsvc.exe'.,PENDING
+wuvww95a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+WXVWA98A0234,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvww99a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvww96a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'D:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe'.,PENDING
+wrvww96a0423,DATA_CENTER,-,-,-,Role,Messaging Server,Label Messaging Server was predicted due to the presence of process with value 'C:\\Windows\\System32\\mqsvc.exe'.,PENDING
+wrvww96a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvww97a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'Connect Direct v6.3.0'.,PENDING
+wrvww97a0423,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value 'Connect Direct v6.3.0'.,PENDING
+wrvww97a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wxvwa88a0332,DATA_CENTER,-,-,-,App,ICMP,Label ICMP was predicted due to the presence of process with value 'tomcat'.,PENDING
+wxvwa88a0332,DATA_CENTER,-,-,-,Role,Web server,Label Web server was predicted due to the presence of process with value 'tomcat'.,PENDING
+wxvwa88a0332,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+wpvww98a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'D:\\Program Files (x86)\\Sterling Commerce\\Connect Direct v6.3.0\\Server\\CDNT.exe'.,PENDING
+wpvww98a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvww99a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'CA Workload Automation Agent'.,PENDING
+wsvwa95a0084,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process with value 'C:\\Program Files\\NetprobeNT_prod2\\NetprobeNT-DEV-22211.exe'.,PENDING
+wsvwa95a0084,DATA_CENTER,-,-,-,Role,Monitoring Server,Label Monitoring Server was predicted due to the presence of process with value 'NetprobeNT'.,PENDING
+wsvwa95a0084,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+advww00a0225,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process name with value 'Tridion'.,PENDING
+advww00a0225,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of process name with value 'inetinfo.exe'.,PENDING
+advww00a0225,DATA_CENTER,-,-,-,Env,Staging,Environment predicted as Staging.,PENDING
+advww00a0220,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of hostname with value advww00a0220.,PENDING
+advww00a0220,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process with value 'D:\AutoSys 11.3\SystemAgent\autosys_dev\cybAgent.exe'.,PENDING
+advww00a0220,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-004a-ixb-cu,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+opicp-w-app-r10,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-d02,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-004a-ixb-cu,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process name with value '/opt/apps/tuxedo/tuxedo12gR2/tuxedo12.2.2.0.0/bin/JSH'.,PENDING
+mo1-004a-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-004c-ixb-cu,DATA_CENTER,-,-,-,App,OFX,Label OFX was predicted due to the presence of process with value /opt/apps/tuxedo/tuxedo12gR2/tuxedo12.2.2.0.0/bin/JSH.,PENDING
+mo1-004c-ixb-cu,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of processes with value JSH and PSAPPSRV indicating server functionality.,PENDING
+mo1-005d-ixb-cu,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+mo1-005d-ixb-cu,DATA_CENTER,-,-,-,Role,Automation Server,Label Automation Server was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+mo1-005d-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-005e-ixb-of,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+mo1-005e-ixb-of,DATA_CENTER,-,-,-,Role,Workload Automation Agent,Label Workload Automation Agent was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+mo1-005e-ixb-of,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-007c-ixb-of,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/cdunix/ndm/bin/cdpmgr'.,PENDING
+cpvrw00a0124,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mo1-007c-ixb-of,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value '/opt/cdunix/ndm/bin/cdpmgr'.,PENDING
+mo1-007c-ixb-of,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvra100a0916,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'cybAgent.bin'.,PENDING
+wrvra100a0916,DATA_CENTER,-,-,-,Role,Automation Server,Label Automation Server was predicted due to the presence of process with value 'cybAgent.bin'.,PENDING
+wrvra100a0916,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+lrvrw00a0083,DATA_CENTER,-,-,-,App,L7LIQ,Label L7LIQ was predicted due to the presence of host name with value 'lrvrw00a0083'.,PENDING
+lrvrw00a0083,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of httpd processes with various port values.,PENDING
+lrvrw00a0083,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvra97a0832,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of process name with value '/apps/mwauto/java/jdk-17.0.17/bin/java'.,PENDING
+wpvra97a0832,DATA_CENTER,-,-,-,Role,Monitoring,Label Monitoring was predicted due to the presence of process name with value '/opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64'.,PENDING
+wpvra97a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvra98a0832,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of process with value '/apps/mwauto/java/jdk-17.0.17/bin/java-port 11022-TCP'.,PENDING
+wpvra98a0832,DATA_CENTER,-,-,-,Role,monitoring server,Label monitoring server was predicted due to the presence of process with value '/opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64-port 22011-TCP'.,PENDING
+wpvra98a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+apvww00a0429,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvra99a0832,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of hostname with value wpvra99a0832.,PENDING
+opicp-w-app-u01,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvra99a0832,DATA_CENTER,-,-,-,Role,Monitoring Service,Label Monitoring Service was predicted due to the presence of netprobe process with value /opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64.,PENDING
+wpvra99a0832,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+mn2-012c-ixb-cu,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'mn2-012c-ixb-cu'.,PENDING
+mn2-012c-ixb-cu,DATA_CENTER,-,-,-,Role,Backup Server,"Label Backup Server was predicted due to the presence of processes with value 'vnetd', 'bpcd', and 'avagent.bin'.",PENDING
+mn2-012c-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wpvwa87a1043,DATA_CENTER,-,-,-,App,ICMP,Label ICMP was predicted due to the presence of processes related to Tomcat and Network Monitoring.,PENDING
+wpvwa87a1043,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of Tomcat application instances running on various ports.,PENDING
+wpvwa87a1043,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+nc3-002a-ixb-of,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+nc3-002a-ixb-of,DATA_CENTER,-,-,-,Role,Job Scheduler Agent,Label Job Scheduler Agent was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+nc3-002a-ixb-of,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+crvrw00a0127,DATA_CENTER,-,-,-,App,L7LIQ,Label L7LIQ was predicted due to the presence of process with value '/apps/mwauto/java/jdk-11.0.29/bin/java'.,PENDING
+opicp-w-app-u01,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value opicp-w-app-u01.,PENDING
+opicp-w-app-u01,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process names with value Opics Plus Server.,PENDING
+opicp-w-lic-u01,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-lic-u01'.,PENDING
+opicp-w-lic-u01,DATA_CENTER,-,-,-,Role,License Server,Label License Server was predicted due to the presence of process with value 'elsd.exe - Finastra Entitlement Management'.,PENDING
+opicp-w-lic-u01,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-c03,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-c03'.,PENDING
+opicp-w-app-c03,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of processes with value 'OpicsPlus'.,PENDING
+opicp-w-app-c03,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-s01,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-s01'.,PENDING
+opicp-w-app-s01,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of application services with value 'Opics Plus Services 4.0'.,PENDING
+opicp-w-app-s01,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+WXVWA98A0234,DATA_CENTER,-,-,-,App,ICMP,Label ICMP was predicted due to the presence of process with value 'D:\\AutoSys 11.3\\SystemAgent\\autosys_prod\\cybAgent.exe'.,PENDING
+WXVWA98A0234,DATA_CENTER,-,-,-,Role,Automation Server,Label Automation Server was predicted due to the presence of AutoSys process with value 'cybAgent.exe'.,PENDING
+WUVWA87A0234,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'CDNT.exe'.,PENDING
+crvrw00a0127,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+WUVWA87A0234,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of process with value 'CDNT.exe'.,PENDING
+WUVWA87A0234,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+opicp-w-lic-x01,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-lic-x01'.,PENDING
+opicp-w-lic-x01,DATA_CENTER,-,-,-,Role,License Server,Label License Server was predicted due to the presence of a combination of name patterns in inventory and hostname.,PENDING
+opicp-w-lic-x01,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-x06,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-x06'.,PENDING
+opicp-w-app-x06,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of processes like Misys OpicsPlus Framework services that generally indicate application handling activities.,PENDING
+opicp-w-app-x06,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-d02,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-d02'.,PENDING
+opicp-w-app-d02,DATA_CENTER,-,-,-,Role,IIS ADMIN,Label IIS ADMIN was predicted due to the presence of process name with value 'inetinfo.exe'.,PENDING
+crvrw00a0127,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of process with value 'java running on TCP port 80'.,PENDING
+crvrw00a0126,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64'.,PENDING
+crvrw00a0126,DATA_CENTER,-,-,-,Role,Monitoring,Label Monitoring was predicted due to the presence of process with value '/opt/qosmon/qostool/prd-netprobe-22011/geneos-netprobe-6.5.0-230825-linux-x64/bin/netprobe.linux_64'.,PENDING
+crvrw00a0126,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+crvra97a1133,DATA_CENTER,-,-,-,App,1EDM,Label 1EDM was predicted due to the presence of process with value '/apps/DCTM/EDMS/product/21.4/bin/documentum'.,PENDING
+crvra97a1133,DATA_CENTER,-,-,-,Role,Document Management Server,Label Document Management Server was predicted due to the presence of process with value '/apps/DCTM/EDMS/product/21.4/bin/documentum'.,PENDING
+crvra97a1133,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+crvra94a1133,DATA_CENTER,-,-,-,App,1EDM,Label 1EDM was predicted due to the presence of process names with value 'documentum'.,PENDING
+crvra94a1133,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of java processes with value '/apps/mwauto/java/jdk-11.0.29/bin/java'.,PENDING
+crvra94a1133,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+al1-013c-ixb-cu,DATA_CENTER,-,-,-,App,1CMX,Label 1CMX was predicted due to the presence of processes with value Tuxedo and PeopleSoft.,PENDING
+opicp-w-app-p11,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+al1-013c-ixb-cu,DATA_CENTER,-,-,-,Role,Application Server,"Label Application Server was predicted due to the presence of PeopleSoft and Tuxedo processes with value PeopleSoft (PSAPPSRV, PSQRYSRV, PSQCKSRV) and Tuxedo.",PENDING
+al1-013c-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+al1-002d-ixb-cu,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/apps/ptools/pt85914/bin/PSAPPSRV'.,PENDING
+al1-002d-ixb-cu,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process with value '/opt/apps/ptools/pt85914/bin/PSAPPSRV'.,PENDING
+al1-002d-ixb-cu,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+wrvwa95a1056,DATA_CENTER,-,-,-,App,L7LIQ,Label L7LIQ was predicted due to the presence of process name with value 'LoanIQ'.,PENDING
+wrvwa95a1056,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of multiple Java processes and LoanIQ-related processes indicating application hosting.,PENDING
+wrvwa95a1056,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+WRVWA78A1077,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of processes with value 'D:\Program Files (x86)\Sterling Commerce\Connect Direct v6.3.0\Server\CDNT.exe'.,PENDING
+WRVWA78A1077,DATA_CENTER,-,-,-,Role,File Transfer Server,Label File Transfer Server was predicted due to the presence of processes with value 'D:\Program Files (x86)\Sterling Commerce\Connect Direct v6.3.0\Server\CDNT.exe'.,PENDING
+WRVWA78A1077,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-r10,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-r10'.,PENDING
+opicp-w-app-r10,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process with value 'Misys.OpicsPlus.Framework.Messaging.PubSub.HeartbeatServiceEngine.exe'.,PENDING
+WRVWA87A1077,DATA_CENTER,-,-,-,App,L7LIQ,Label L7LIQ was predicted due to the presence of hostname with value WRVWA87A1077.,PENDING
+asvww00a0423,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+WRVWA87A1077,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of svchost.exe processes.,PENDING
+WRVWA87A1077,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+cspra00a0332,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+cspra00a0332,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of process with value '/apps/mwauto/java/jdk1.8.0_471/jre/bin/java-port 8009-TCP'.,PENDING
+cspra00a0332,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+crpra00a0335,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+crpra00a0335,DATA_CENTER,-,-,-,Role,Backup Server,Label Backup Server was predicted due to the presence of process with value '/usr/openv/netbackup/bin/vnetd'.,PENDING
+crpra00a0335,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+anvww00a0430,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value 'D:\\AutoSys 11.3\\SystemAgent\\autosys_dev\\cybAgent.exe'.,PENDING
+anvww00a0430,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of process name with value 'C:\\Windows\\System32\\inetsrv\\inetinfo.exe'.,PENDING
+anvww00a0430,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+asvww00a0423,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of hostname with value asvww00a0423.,PENDING
+asvww00a0423,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of TcmServiceHost.exe with value 'port 2660-TCP'.,PENDING
+arvww00a0433,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process names containing 1CTM,PENDING
+arvww00a0433,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process names related to application services indicating hosting duties.,PENDING
+arvww00a0433,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+arvww00a0424,DATA_CENTER,-,-,-,App,1SCD2,"Label 1SCD2 was predicted due to the presence of processes with value {'D:\\AutoSys 11.3\\SystemAgent\\autosys_dev\\cybAgent.exe-CA Workload Automation Agent (autosys_dev)-port 9490-TCP', 'D:\\AutoSys 11.3\\SystemAgent\\autosys_prod\\cybAgent.exe-CA Workload Automation Agent (autosys_prod)-port 9495-TCP'}.",PENDING
+arvww00a0424,DATA_CENTER,-,-,-,Role,Database,Label Database was predicted due to the presence of processes with value 'tnslsnr.exe-OracleOraClient19Home1TNSListener'.,PENDING
+arvww00a0424,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+arvww00a0437,DATA_CENTER,-,-,-,App,1CTM,Label 1CTM was predicted due to the presence of process name with value 'Tridion' in the format indicating 1CTM services.,PENDING
+arvww00a0437,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+cpvrw00a0124,DATA_CENTER,-,-,-,App,ICMP,Label ICMP was predicted due to the presence of process with value '/apps/mwauto/java/jdk1.8.0_471/bin/java-port 38443-TCP'.,PENDING
+cpvrw00a0124,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process with value '/apps/mwauto/java/jdk-11.0.29/bin/java-port 55443-TCP'.,PENDING
+cpvrw00a0126,DATA_CENTER,-,-,-,App,MULE,Label MULE was predicted due to the presence of processes with specific Java applications and port interactions suggesting custom middleware related tasks.,PENDING
+cpvrw00a0126,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of multiple Java processes indicating application hosting capabilities.,PENDING
+lxvra93a0001,DATA_CENTER,-,-,-,App,1CMX,Label 1CMX was predicted due to the presence of java processes with value '/apps/pmg/8.5/base/java/jre/bin/java'.,PENDING
+lxvra93a0001,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of significant Java process with value '/apps/pmg/8.5/base/java/jre/bin/java'.,PENDING
+lxvra93a0001,DATA_CENTER,-,-,-,Env,Development,Environment predicted as Development.,PENDING
+opicp-w-app-p13,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-p13'.,PENDING
+opicp-w-app-p13,DATA_CENTER,-,-,-,Role,Messaging Server,Label Messaging Server was predicted due to the presence of process with value 'mqsvc.exe'.,PENDING
+opicp-w-app-p13,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+opicp-w-app-p11,DATA_CENTER,-,-,-,App,OPICP,Label OPICP was predicted due to the presence of hostname with value 'opicp-w-app-p11'.,PENDING
+opicp-w-app-p11,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of process with value 'cybAgent.exe-CA Workload Automation Agent'.,PENDING
+auvra00a0305,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_dev/cybAgent.bin-port 9490-TCP'.,PENDING
+auvra00a0305,DATA_CENTER,-,-,-,Role,Backup Server,Label Backup Server was predicted due to the presence of process with value '/usr/openv/netbackup/bin/vnetd-port 13724-TCP'.,PENDING
+advra00a0303,DATA_CENTER,-,-,-,App,SSO,Label SSO was predicted due to the presence of autosys_prod process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+advra00a0303,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of httpd process with value '/apps/mwauto/apache/2.4.65/bin/httpd-port 8002-TCP'.,PENDING
+advra00a0303,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+asvra00a0304,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of role with value 'autosys_prod'.,PENDING
+asvra00a0304,DATA_CENTER,-,-,-,Role,Application Server,Label Application Server was predicted due to the presence of processes with value 'java'.,PENDING
+asvra00a0304,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+apvra00a0302,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process name with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+apvra00a0302,DATA_CENTER,-,-,-,Role,Web server,Label Web server was predicted due to the presence of process name with value '/apps/mwauto/apache/2.4.65/bin/httpd'.,PENDING
+apvra00a0302,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+acvra00a0410,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin'.,PENDING
+advra00a0410,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+cppra00a0335,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of process service with value '/apps/mwauto/java/jdk1.8.0_471/jre/bin/java-port 8009-TCP'.,PENDING
+cppra00a0335,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+arvra00a0999,DATA_CENTER,-,-,-,Role,Automation Agent,Label Automation Agent was predicted due to the presence of process with value 'cybAgent.bin'.,PENDING
+arvra00a0999,DATA_CENTER,-,-,-,Env,Production,Environment predicted as Production.,PENDING
+apvww00a0429,DATA_CENTER,-,-,-,Role,Web Server,Label Web Server was predicted due to the presence of web service related processes with value 'D:\\apps\\Tridion\\Services\\1CTM_48502_DEP_STG\\bin\\procrun.exe-TridionDeployerService-1CTMStaging'.,PENDING
+cppra00a0335,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process service with value '/opt/CA/r12/SystemAgent/autosys_prod/cybAgent.bin-port 9495-TCP'.,PENDING
+advra00a0410,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process names with value '/opt/CA/r12/SystemAgent/autosys_dev/cybAgent.bin-port 9490-TCP'.,PENDING
+arvra00a0999,DATA_CENTER,-,-,-,App,1SCD2,Label 1SCD2 was predicted due to the presence of process with value 'cybAgent.bin'.,PENDING

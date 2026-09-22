@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const RulerTraingle: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M6 6L3 3V21H21L18 18M6 6L9 9M6 6L5 7M9 9L12 12M9 9L8 10M12 12L15 15M12 12L11 13M15 15L14 16M15 15L18 18M18 18L17 19M6 12V18H12L6 12Z" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M2.61732 2.07615C2.99099 1.92137 3.42111 2.00692 3.70711 2.29292L5.99999 4.5858L5.29289 5.29289C4.90237 5.68342 4.90237 6.31658 5.29289 6.70711C5.68342 7.09763 6.31658 7.09763 6.70711 6.70711L7.4142 6.00001L8.99999 7.5858L8.29289 8.29289C7.90237 8.68342 7.90237 9.31658 8.29289 9.70711C8.68342 10.0976 9.31658 10.0976 9.70711 9.70711L10.4142 9.00001L12 10.5858L11.2929 11.2929C10.9024 11.6834 10.9024 12.3166 11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071L13.4142 12L15 13.5858L14.2929 14.2929C13.9024 14.6834 13.9024 15.3166 14.2929 15.7071C14.6834 16.0976 15.3166 16.0976 15.7071 15.7071L16.4142 15L18 16.5858L17.2929 17.2929C16.9024 17.6834 16.9024 18.3166 17.2929 18.7071C17.6834 19.0976 18.3166 19.0976 18.7071 18.7071L19.4142 18L21.7071 20.2929C21.9931 20.5789 22.0787 21.009 21.9239 21.3827C21.7691 21.7564 21.4045 22 21 22H3C2.44772 22 2 21.5523 2 21V3.00003C2 2.59557 2.24364 2.23093 2.61732 2.07615ZM6 12V18H12L6 12Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('ruler-traingle', RulerTraingle);

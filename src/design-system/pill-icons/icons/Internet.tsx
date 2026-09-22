@@ -1,0 +1,28 @@
+import React from 'react';
+import type { PillIconComponentProps } from '../types';
+import { registerPillIcon } from '../registry';
+
+export const Internet: React.FC<PillIconComponentProps> = ({
+  size = 18,
+  bgColor = 'var(--lightning-bluegray-600)',
+  iconColor = 'var(--lightning-contrast-white)',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-pill-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background circle */}
+      <circle cx="9" cy="9" r="9" fill={bgColor} />
+      {/* Icon content */}
+      <path d="M12.4059 8.63617H12.3793C12.3965 8.51973 12.4054 8.40221 12.4059 8.28451C12.3967 7.60731 12.1422 6.95642 11.6895 6.45271C11.2367 5.94899 10.6166 5.62668 9.9442 5.54562C9.2718 5.46456 8.59283 5.63026 8.03336 6.01195C7.47389 6.39364 7.07194 6.96538 6.90214 7.62102C6.5603 7.51268 6.19905 7.47962 5.84322 7.5241C5.48739 7.56858 5.1454 7.68956 4.84075 7.87872C4.53609 8.06788 4.27599 8.32074 4.07831 8.61994C3.88062 8.91913 3.75004 9.25757 3.69553 9.612C3.64102 9.96644 3.66387 10.3285 3.76252 10.6732C3.86117 11.018 4.03327 11.3373 4.26701 11.6093C4.50074 11.8813 4.79058 12.0994 5.1166 12.2488C5.44262 12.3981 5.79711 12.4751 6.15571 12.4745H12.4059C12.9171 12.4745 13.4073 12.2714 13.7688 11.91C14.1303 11.5485 14.3333 11.0582 14.3333 10.547C14.3333 10.0358 14.1303 9.54559 13.7688 9.18412C13.4073 8.82265 12.9171 8.61958 12.4059 8.61958V8.63617Z" fill={iconColor}/>
+    </svg>
+  );
+};
+
+registerPillIcon('internet', Internet);

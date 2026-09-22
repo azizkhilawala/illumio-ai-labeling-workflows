@@ -1,0 +1,31 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const ArrowsUpDown: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><path d="M12 3V21M12 3L16 7M12 3L8 7M12 21L8 17M12 21L16 17" stroke={color} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></>
+      )}
+      {variant === 'solid' && (
+        <><path fillRule="evenodd" clipRule="evenodd" d="M12.0001 2C12.2653 2 12.5197 2.10536 12.7072 2.29289L16.7072 6.29289C17.0978 6.68342 17.0978 7.31658 16.7072 7.70711C16.3167 8.09763 15.6835 8.09763 15.293 7.70711L13.0001 5.41421V18.5858L15.293 16.2929C15.6835 15.9024 16.3167 15.9024 16.7072 16.2929C17.0978 16.6834 17.0978 17.3166 16.7072 17.7071L12.7072 21.7071C12.5197 21.8946 12.2653 22 12.0001 22C11.7349 22 11.4806 21.8946 11.293 21.7071L7.29302 17.7071C6.90249 17.3166 6.90249 16.6834 7.29302 16.2929C7.68354 15.9024 8.3167 15.9024 8.70723 16.2929L11.0001 18.5858V5.41421L8.70723 7.70711C8.3167 8.09763 7.68354 8.09763 7.29302 7.70711C6.90249 7.31658 6.90249 6.68342 7.29302 6.29289L11.293 2.29289C11.4806 2.10536 11.7349 2 12.0001 2Z" fill={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('arrows-up-down', ArrowsUpDown);

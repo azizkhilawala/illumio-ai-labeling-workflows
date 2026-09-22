@@ -1,0 +1,29 @@
+import React from 'react';
+import type { PillIconComponentProps } from '../types';
+import { registerPillIcon } from '../registry';
+
+export const Endpoint: React.FC<PillIconComponentProps> = ({
+  size = 18,
+  bgColor = 'var(--lightning-bluegray-600)',
+  iconColor = 'var(--lightning-contrast-white)',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-pill-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background circle */}
+      <circle cx="9" cy="9" r="9" fill={bgColor} />
+      {/* Icon content */}
+      <path d="M15.6 13.7714H2.8L4.62857 11.7142H13.7714L15.6 13.7714Z" fill={iconColor}/>
+<path fillRule="evenodd" clipRule="evenodd" d="M13.7714 4.62854H4.62857V11.0285H13.7714V4.62854ZM12.6286 5.7714H5.77143V9.88568H12.6286V5.7714Z" fill={iconColor}/>
+    </svg>
+  );
+};
+
+registerPillIcon('endpoint', Endpoint);

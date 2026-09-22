@@ -1,0 +1,28 @@
+import React from 'react';
+import type { PillIconComponentProps } from '../types';
+import { registerPillIcon } from '../registry';
+
+export const Lock: React.FC<PillIconComponentProps> = ({
+  size = 18,
+  bgColor = 'var(--lightning-bluegray-600)',
+  iconColor = 'var(--lightning-contrast-white)',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-pill-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Background circle */}
+      <circle cx="9" cy="9" r="9" fill={bgColor} />
+      {/* Icon content */}
+      <path d="M12.3333 7.33329H11.6667V5.33329C11.6667 4.62605 11.3857 3.94777 10.8856 3.44767C10.3855 2.94758 9.70724 2.66663 9 2.66663C8.29276 2.66663 7.61448 2.94758 7.11438 3.44767C6.61428 3.94777 6.33333 4.62605 6.33333 5.33329V7.33329H5.66667C5.48986 7.33329 5.32029 7.40353 5.19526 7.52855C5.07024 7.65358 5 7.82315 5 7.99996V12.6666C5 12.8434 5.07024 13.013 5.19526 13.138C5.32029 13.2631 5.48986 13.3333 5.66667 13.3333H12.3333C12.5101 13.3333 12.6797 13.2631 12.8047 13.138C12.9298 13.013 13 12.8434 13 12.6666V7.99996C13 7.82315 12.9298 7.65358 12.8047 7.52855C12.6797 7.40353 12.5101 7.33329 12.3333 7.33329ZM7.66667 5.33329C7.66667 4.97967 7.80714 4.64053 8.05719 4.39048C8.30724 4.14043 8.64638 3.99996 9 3.99996C9.35362 3.99996 9.69276 4.14043 9.94281 4.39048C10.1929 4.64053 10.3333 4.97967 10.3333 5.33329V7.33329H7.66667V5.33329Z" fill={iconColor}/>
+    </svg>
+  );
+};
+
+registerPillIcon('lock', Lock);

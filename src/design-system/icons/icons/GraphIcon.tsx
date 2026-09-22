@@ -1,0 +1,36 @@
+import React from 'react';
+import type { IconComponentProps } from '../types';
+import { registerIcon } from '../registry';
+
+export const GraphIcon: React.FC<IconComponentProps> = ({
+  variant = 'linear',
+  size = 24,
+  color = 'currentColor',
+  className = '',
+}) => {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 18 18"
+      fill="none"
+      className={`ds-icon ${className}`}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {variant === 'linear' && (
+        <><circle cx="9" cy="9" r="9" fill={color}/>
+<path d="M14.3333 5.19043H3.66666V12.8095H14.3333V5.19043Z" stroke={color}/>
+<path d="M8.74601 10.5238C9.58758 10.5238 10.2698 9.84158 10.2698 9.00001C10.2698 8.15843 9.58758 7.4762 8.74601 7.4762C7.90443 7.4762 7.2222 8.15843 7.2222 9.00001C7.2222 9.84158 7.90443 10.5238 8.74601 10.5238Z" fill={color}/>
+<path d="M5.44443 7.98414C6.00548 7.98414 6.4603 7.52932 6.4603 6.96827C6.4603 6.40721 6.00548 5.95239 5.44443 5.95239C4.88338 5.95239 4.42856 6.40721 4.42856 6.96827C4.42856 7.52932 4.88338 7.98414 5.44443 7.98414Z" fill={color}/>
+<path d="M5.44443 12.0476C6.00548 12.0476 6.4603 11.5928 6.4603 11.0317C6.4603 10.4707 6.00548 10.0159 5.44443 10.0159C4.88338 10.0159 4.42856 10.4707 4.42856 11.0317C4.42856 11.5928 4.88338 12.0476 5.44443 12.0476Z" fill={color}/>
+<path d="M12.5555 11.0317C13.1166 11.0317 13.5714 10.5769 13.5714 10.0159C13.5714 9.45482 13.1166 9 12.5555 9C11.9945 9 11.5397 9.45482 11.5397 10.0159C11.5397 10.5769 11.9945 11.0317 12.5555 11.0317Z" fill={color}/>
+<path d="M8.74601 9.00001L5.44443 6.96826" stroke={color}/>
+<path d="M8.74603 9L12.5556 10.0159" stroke={color}/>
+<path d="M8.74601 9L5.44443 11.0317" stroke={color}/></>
+      )}
+    </svg>
+  );
+};
+
+// Register this icon
+registerIcon('graph-icon', GraphIcon);
