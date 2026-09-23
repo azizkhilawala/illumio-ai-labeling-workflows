@@ -38,6 +38,7 @@
     "@prisma/extension-accelerate": "^3.0.1",
     "@tanstack/react-query": "^5.99.0",
     "@tanstack/react-query-devtools": "^5.99.0",
+    "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "ag-charts-community": "^13.1.0",
     "ag-charts-react": "^13.1.0",
