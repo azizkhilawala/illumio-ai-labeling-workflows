@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { QueryProvider } from "@/providers";
 import { ToastProvider } from "@/design-system/components/Toast";
 import "./globals.css";
@@ -35,6 +36,7 @@ export default function RootLayout({
             {children}
           </ToastProvider>
         </QueryProvider>
+        <SpeedInsights />
         <Script src="https://mcp.figma.com/mcp/html-to-design/capture.js" strategy="afterInteractive" />
       </body>
     </html>

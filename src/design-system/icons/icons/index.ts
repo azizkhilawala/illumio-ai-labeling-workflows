@@ -204,8 +204,6 @@ export { Browser } from './Browser';
 export { Brush } from './Brush';
 export { BugSlash } from './BugSlash';
 export { Bug } from './Bug';
-export { BuildingNGO } from './BuildingNGO';
-export { BuildingUN } from './BuildingUN';
 export { BuildingArrowRight } from './BuildingArrowRight';
 export { BuildingCar } from './BuildingCar';
 export { BuildingCheck } from './BuildingCheck';
